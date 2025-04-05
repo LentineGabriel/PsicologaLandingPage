@@ -2,12 +2,10 @@
 
 /* CONFIGURAÇÃO GLOBAL */
 * {
-  max-width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 ul {
   list-style: none;
   text-align: center;
@@ -15,7 +13,6 @@ ul {
   gap: 60px;
   font-family: "Teko";
 }
-
 a {
   text-decoration: none;
   color: inherit; /* mantém a cor original */
@@ -28,39 +25,34 @@ a {
   background-color: #2bbff9;
 }
 
-.logo-nav {
-  cursor: pointer;
-  margin-right: 150px;
-}
-
 .ciano-claro {
   color: #00ffff;
 }
 
 .nav-item {
-  transition: 2s all;
+  transition: 1s all;
   font-weight: 800;
   color: white;
   text-transform: uppercase;
   margin-top: 30px;
+  padding: 5px 15px;
   font-size: 30px;
 }
 .nav-item:hover {
   color: #0e8cbd;
-  transition: 0.3s all;
+  transition: 0.2s all;
 }
 
 .botao-1 {
-  background-color: #00cbcc;
-  border-radius: 50px;
+  background-color: #00d9ff;
+  padding: 5px 15px;
+  border-radius: 10px;
   font-size: 20px;
-  padding: 15px;
   margin-left: 30px;
-  margin-top: 25px;
 }
 
 .botao-1:hover {
-  background-color: #0baeee;
+  background-color: #0984b4;
   cursor: pointer;
 }
 
@@ -71,29 +63,92 @@ a {
 /* BODY */
 /*  Inicio */
 .inicio-do-site {
-  background-color: #8bffff;
+  height: 100%;
 }
 
 #logo {
-  margin: 4%;
-  margin-left: 8%;
   width: 200px;
   height: 250px;
   position: relative;
-  top: 80px;
+  top: 60px;
   left: 275px;
 }
 .texto-chamativo {
-  color: white;
-  font-family: "Sansita";
-  padding: 20px;
-  margin-left: 60%;
+  font-family: "Roboto";
+  color: black;
   font-style: oblique;
-  font-size: 40px;
   text-align: center;
   position: relative;
+  font-size: 30px;
+  margin-left: 50%;
+  margin-top: 20px;
+  top: -400px;
   bottom: 250px;
   right: 50px;
+}
+.grande {
+  font-size: 45px;
+}
+.ciano {
+  color: #00ffff;
+}
+.btn-social{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  width: 80%;
+  margin-top: -200px;
+  margin-right: 500px;
+}
+.btn-social ul li{
+  position: relative;
+  background: #226585;
+  margin: 5px;
+  padding: 5px;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.btn-social ul li a{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 4s;
+}
+.btn-social ul li::before{
+  transition: 0.4s;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 90%;
+  left: 0;
+  background: #00ffff;
+  z-index: -1;
+  transform: scale(1);
+  transition: 4s;
+}
+.btn-social ul li:hover::before{
+  transition: 0.4s;
+  top: 0%;
+}
+.btn-social ul li a:hover{
+  color: #555555;
+}
+.icone-whatsapp{
+  height: 45px;
+}
+.icone-instagram{
+  height: 45px;
+}
+.icone-gmail{
+  height: 45px;
 }
 
 /* Sobre Mim */
@@ -114,7 +169,6 @@ a {
 
 .caixa-perguntas-respostas {
   position: relative;
-  bottom: 920px;
   right: 50px;
 }
 .perguntas {
@@ -122,19 +176,26 @@ a {
   display: flex;
   font-family: "Sansita";
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 600;
   margin-left: 60%;
 }
 
 .respostas {
   font-family: "Roboto";
   margin-left: 60%;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
+  font-weight: 300;
   font-size: 18px;
 }
 
 /* depoimentos */
-
+#texto-motivacional{
+  font-family: "Sansita";
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+  color: #00cbcc;
+}
 .depoimentos-card-principal {
   display: flex;
   flex-direction: row;
