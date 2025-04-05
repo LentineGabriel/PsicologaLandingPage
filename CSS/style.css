@@ -1,115 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap");
 
+/* CONFIGURAÇÃO GLOBAL */
 * {
-    font-family: "roboto";
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.ciano-1{
-    width: 100%;
-    padding: 28px 8%;
-    top: 0;
-    background-color: #8bffff;
-    z-index: 3;
-}   
-#inicio{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-#menu{
-    display: flex;
-    list-style: none;
-    gap: 48px;
-    color: white;
-    text-decoration: none;
-}
-.menu-item{
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
+ul {
+  list-style: none;
+  text-align: center;
+  display: inline-flex;
+  gap: 60px;
+  font-family: "Teko";
 }
 
-.botao-add{
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #00c6c7;
-    border-radius: 12px;
-    padding: 10px 20px;
-    font-weight: 600;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.5s;
-    font-size: 16px;
-    cursor: pointer;
+a {
+  text-decoration: none;
+  color: inherit; /* mantém a cor original */
 }
 
-.botao-add:hover{
-    background: #009092;
-    box-shadow: 0 0 15px rgba(31, 128, 141, 0.8);
-    text-decoration: none;
-}
-.whatsapp{
-    text-decoration: none;
-}
-.ciano-2{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* HEADER */
+.cabecalho {
+  height: 100px;
+  text-align: center;
+  background-color: #2bbff9;
 }
 
-.cintia{
-    width: -40rem;
-    height: 80vh;
-    border-radius: 100%;
-    object-fit: cover;
-    position: absolute;
-    left: 100px;
-    justify-content: flex-end;
-    column-count: 4;
-    column-gap: 3rem;
-    float: left;
-    margin-bottom: -10rem;
-    margin-top: 500px;
-    margin-left: -60px;
+.logo-nav {
+  cursor: pointer;
+  margin-right: 150px;
 }
 
-.cintia2 {
-    width: -40rem;
-    height: 80vh;
-    border-radius: 100%;
-    object-fit: cover;
-    position: absolute;
-    right:100px;
-    justify-content: flex-end;
-    column-count: 4;
-    column-gap: 3rem;
-    float: right;
-    margin-bottom: -10rem;
-    margin-top: 500px;
-    margin-right: -80px;
+.ciano-claro {
+  color: #00ffff;
 }
 
-.ciano-3 {
-   background-color:#c4ffffff;
+.nav-item {
+  transition: 2s all;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 30px;
+  font-size: 30px;
+}
+.nav-item:hover {
+  color: #0e8cbd;
+  transition: 0.3s all;
 }
 
+.botao-1 {
+  background-color: #00cbcc;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 15px;
+  margin-left: 30px;
+  margin-top: 25px;
+}
+
+.botao-1:hover {
+  background-color: #0baeee;
+  cursor: pointer;
+}
+
+.cor-fonte:hover {
+  color: white;
+}
+
+/* BODY */
+/*  Inicio */
+.inicio-do-site {
+  background-color: #8bffff;
+}
+
+#logo {
+  margin: 4%;
+  margin-left: 8%;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  top: 80px;
+  left: 275px;
+}
+.texto-chamativo {
+  color: white;
+  font-family: "Sansita";
+  padding: 20px;
+  margin-left: 60%;
+  font-style: oblique;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  bottom: 250px;
+  right: 50px;
+}
+
+/* Sobre Mim */
+.sobremim-ciano2 {
+  background-color: #c4ffff;
+  height: 1100px;
+}
+
+.cintia-almeida {
+  width: 35rem;
+  height: 55rem;
+  border-radius: 30px;
+  margin: 50px 270px;
+  position: relative;
+  top: 25px;
+  right: 30px;
+}
+
+.caixa-perguntas-respostas {
+  position: relative;
+  bottom: 920px;
+  right: 50px;
+}
 .perguntas {
-    font-family: "sansita";
-    font-size: 40px;
-    font-weight: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 20rem;
+  color: #00cbcc;
+  display: flex;
+  font-family: "Sansita";
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-left: 60%;
 }
 
 .respostas {
-    font-family: "roboto";
+  font-family: "Roboto";
+  margin-left: 60%;
+  margin-bottom: 60px;
+  font-size: 18px;
 }
+
+/* depoimentos */
+
+.depoimentos-card-principal {
+  display: flex;
+  flex-direction: row;
+  margin: 60px 100px;
+  max-width: 100%;
+  height: 350px;
+  gap: 2rem;
+}
+
+.depoimentos-card-container {
+  padding: 80px;
+  background-color: #8bffff;
+  border-radius: 30px;
+}
+
+/* contatos/agendamentos */
+/* consultorio */
+/* faq */
+
+/* FOOTER */
