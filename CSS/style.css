@@ -92,7 +92,7 @@ a {
 .ciano {
   color: #00ffff;
 }
-.btn-social{
+.btn-social {
   display: flex;
   flex-direction: row;
   justify-content: right;
@@ -101,7 +101,7 @@ a {
   margin-top: -200px;
   margin-right: 500px;
 }
-.btn-social ul li{
+.btn-social ul li {
   position: relative;
   background: #226785;
   margin: 5px;
@@ -112,7 +112,7 @@ a {
   font-size: 1.5rem;
   text-align: center;
 }
-.btn-social ul li a{
+.btn-social ul li a {
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -121,7 +121,7 @@ a {
   color: #ffffff;
   transition: 4s;
 }
-.btn-social ul li::before{
+.btn-social ul li::before {
   transition: 0.4s;
   position: absolute;
   content: "";
@@ -134,20 +134,20 @@ a {
   transform: scale(1);
   transition: 4s;
 }
-.btn-social ul li:hover::before{
+.btn-social ul li:hover::before {
   transition: 0.4s;
   top: 0%;
 }
-.btn-social ul li a:hover{
+.btn-social ul li a:hover {
   color: #555555;
 }
-.icone-whatsapp{
+.icone-whatsapp {
   height: 45px;
 }
-.icone-instagram{
+.icone-instagram {
   height: 45px;
 }
-.icone-gmail{
+.icone-gmail {
   height: 45px;
 }
 
@@ -156,7 +156,6 @@ a {
   background-color: #c4ffff;
   height: 1100px;
 }
-
 .cintia-almeida {
   width: 35rem;
   height: 55rem;
@@ -165,9 +164,8 @@ a {
   position: relative;
   top: 25px;
   right: 30px;
-  opacity: 1.0;
+  opacity: 1;
 }
-
 .caixa-perguntas-respostas {
   position: relative;
   right: 50px;
@@ -181,11 +179,10 @@ a {
   margin-left: 60%;
   cursor: pointer;
 }
-
 .respostas {
   font-family: "Roboto";
   margin-left: 60%;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   font-weight: 300;
   font-size: 18px;
   transition: all 0.3s ease;
@@ -193,30 +190,111 @@ a {
 }
 
 /* depoimentos */
-#texto-motivacional{
+#texto-motivacional {
   font-family: "Sansita";
   font-size: 30px;
   text-align: center;
-  margin-top: 50px;
   color: #00cbcc;
+  margin-top: 50px;
+}
+#texto-descritivo {
+  font-family: "Sansita";
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 40px;
 }
 .depoimentos-card-principal {
   display: flex;
-  flex-direction: row;
-  margin: 60px 100px;
+  margin: 0 auto;
   max-width: 100%;
   height: 350px;
-  gap: 2rem;
+  gap: 10px;
 }
-
 .depoimentos-card-container {
+  flex: 1;
   padding: 80px;
-  background-color: #8bffff;
+  height: 370px;
   border-radius: 30px;
+  background-color: #8bffff;
+  transition: flex 0.6s ease-in-out, transform 0.6s ease-in-out;
+  box-shadow: 0.6s ease-in-out;
+  opacity: 0.6s ease-in-out;
+  transform-origin: center center;
+  cursor: pointer;
 }
-
+/* quando passar o mouse em cima de um card, ele espande e mostra mais informações */
+.depoimentos-card-container:hover {
+  flex: 2;
+  transform: scale(1.05);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+/* os outros cards se encolhem */
+.depoimentos-card-container:hover .box:not(:hover) {
+  flex: 0.8;
+  opacity: 0.6;
+  transform: scale(0.95);
+  filter: blur(0.5px);
+}
+.paciente {
+  display: flex;
+  position: relative;
+  font-size: medium;
+  font-weight: 900;
+  text-transform: uppercase;
+  left: 30px;
+  bottom: 30px;
+}
 /* contatos/agendamentos */
 /* consultorio */
+.titulo-consultorio {
+  font-family: "Sansita";
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 50px;
+  color: #00cbcc;
+}
+.carrossel-instagram {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-behavior: smooth;
+}
+.post {
+  flex: 10 50 80%; /* Tamanho de cada "post" */
+  scroll-snap-align: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.post-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+#maps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Teko";
+  color: white;
+  background-color: #226785;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  margin: 15px 500px;
+}
+#maps:hover {
+  transition: 0.4s;
+  background-color: #00ffff;
+}
 /* faq */
 
 /* FOOTER */
