@@ -1,252 +1,505 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site de Cíntia Almeida, psicóloga...">
-    <meta name="keywords" content="psicologia, psicóloga, atendimento online...">
-    <meta name="author" content="Cintia Almeida">
-    <link rel="shortcut icon" href="Components/Images/Icone/favicon.ico" type="image/x-icon"> <!-- link para o ícone (já ativo) -->
-    <link rel="stylesheet" href="CSS/style.css"> <!-- link para o CSS principal (já ativo) -->
-    <link rel="stylesheet" href="CSS/media.css"> <!-- link para o CSS de responsividade (já ativo) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="JavaScript/script.js"></script> <!-- link para o JS (já ativo) -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site de Cíntia Almeida, psicóloga..." />
+    <meta
+      name="keywords"
+      content="psicologia, psicóloga, atendimento online..."
+    />
+    <meta name="author" content="Cintia Almeida" />
+    <link
+      rel="shortcut icon"
+      href="Components/Images/Icone/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- link para o ícone (já ativo) -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <!-- link para o CSS principal (já ativo) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="CSS/media.css">
+    <link rel="stylesheet" href="CSS/responsividade-celular.css">
     <title>Cintia Almeida - Psicóloga, Terapeuta...</title>
-</head>
-<body>
-    <!-- cabeçalho da página -->
-    <header>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- cabeçalho da página -->
+      <header>
         <nav class="cabecalho">
-            <ul>
-                <!-- estilizar com CSS, deixar um ao lado do outro e todas as letras em maiusculo (e mais o que vocês quiserem fazer) -->
-                <li class="nav-item"><a href="#sobre-mim">sobre mim</a></li>
-                <li class="nav-item"><a href="#depoimentos">depoimentos</a></li>
-                <li class="nav-item"><a href="#agenda">agenda</a></li>
-                <li class="nav-item"><a href="#consultorio">consultório</a></li>
-                <li class="nav-item"><a href="#faq">faq</a></li>
-                <li class="nav-item botao-1 cor-fonte"><a href="https://wa.me/5511947860528" target="_blank">fale comigo</a></li>
-            </ul>
+          <ul class="nav-list">
+            <!-- estilizar com CSS, deixar um ao lado do outro e todas as letras em maiusculo (e mais o que vocês quiserem fazer) -->
+            <li class="nav-item"><a href="#sobre-mim">sobre mim</a></li>
+            <li class="nav-item"><a href="#depoimentos">depoimentos</a></li>
+            <li class="nav-item"><a href="#consultorio">consultório</a></li>
+            <li class="nav-item"><a href="#faq">faq</a></li>
+            <li class="nav-item botao-FaleComigo cor-fonte-branco">
+              <a href="https://wa.me/5511947860528" target="_blank"
+                >fale comigo</a
+              >
+            </li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
-    <!-- centro da página -->
-    <main>
+      <!-- centro da página -->
+      <main>
         <!-- início do site -->
         <section class="inicio-do-site">
-        <div>
-            <img id="logo" src="Components/Images/borboleta-melhorada.png" alt="Ícone do site de Cíntia Almeida: fundo branco com uma borboleta ciano no centro">
-            <p class="texto-chamativo grande">Você não precisa carregar tudo sozinho(a). <span class="ciano">Vamos conversar?</span></p>
-            <p class="texto-chamativo">Se você está se sentindo sobrecarregado, ansioso ou simplesmente perdido, saiba: você não está só. Aqui é um espaço seguro, sem julgamentos, feito pra te ouvir, te entender — e te ajudar a se reencontrar com você mesmo. A terapia é um convite pra se cuidar de verdade. E o primeiro passo pode começar agora.</p>
-        </div>
-        <div class="btn-social">
+          <div class="container-inicial">
+            <img
+              id="logo"
+              src="Components/Images/borboleta-melhorada.png"
+              alt="Ícone do site de Cíntia Almeida: fundo branco com uma borboleta ciano no centro"
+            />
+
+            <div class="textos">
+              <p class="texto-chamativo-maior">
+                Você não precisa carregar tudo sozinho(a).
+                <span class="ciano">Vamos conversar?</span>
+              </p>
+              <p class="texto-chamativo-menor">
+                Se você está se sentindo sobrecarregado, ansioso ou simplesmente perdido, saiba: você não está só. Todos enfrentamos momentos desafiadores na vida, onde parece
+                difícil encontrar clareza ou equilíbrio. Aqui é um espaço seguro, livre de julgamentos, criado para te ouvir, te acolher e caminhar ao seu lado. A terapia é muito
+                mais do que conversar—é uma oportunidade de entender suas emoções, descobrir suas forças e construir um caminho mais leve e significativo.
+              </p>
+            </div>
+          </div>
+          <div class="btn-social">
             <ul>
-                <li><a href="https://wa.me/5511947860528" target="_blank" title="WhatsApp"><img class="icone-whatsapp" src="Components/Images/RedesSociais/logo whatsapp.png" alt="logo do whatsapp"></a></li>
-                <li><a href="https://instagram.com/cintiaalmeidapsico " target="_blank" title="Instagram"><img class="icone-instagram" src="Components/Images/RedesSociais/logo instagram.png" alt="logo do instagram"></a></li>
-                <li><a href="cintia.a.psicologa@gmail.com" target="_blank" title="Gmail"><img class="icone-gmail" src="Components/Images/RedesSociais/logo gmail.png" alt="logo do gmail"></a></li> <!-- arrumar o link -->
+              <li>
+                <a
+                  href="https://wa.me/5511947860528"
+                  target="_blank"
+                  title="WhatsApp"
+                >
+                  <figure class="icone-container">
+                    <img
+                      class="icone-whatsapp"
+                      src="Components/Images/RedesSociais/logo whatsapp.png"
+                      alt="logo do whatsapp"
+                    />
+                    <figcaption>WhatsApp</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/cintiaalmeidapsico "
+                  target="_blank"
+                  title="Instagram"
+                >
+                  <figure class="icone-container">
+                    <img
+                      class="icone-instagram"
+                      src="Components/Images/RedesSociais/logo instagram.png"
+                      alt="logo do instagram"
+                    />
+                    <figcaption>Instagram</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:cintia.a.psicologa@gmail.com"
+                  target="_blank"
+                  title="Gmail"
+                >
+                  <figure class="icone-container">
+                    <img
+                      class="icone-gmail"
+                      src="Components/Images/RedesSociais/logo gmail.png"
+                      alt="logo do gmail"
+                    />
+                    <figcaption>Gmail</figcaption>
+                  </figure>
+                </a>
+              </li>
             </ul>
-        </div>
+          </div>
         </section>
 
         <!-- sobre mim -->
-        <section id="sobre-mim" class="sobremim-ciano2">
-            <img class="cintia-almeida" src="Components/Images/Cintia/fotocintia-1.png" alt="Outra foto da psicóloga Cíntia Almeida, com as mesmas características físicas e de ambiente descritos na primeira foto."></figure>
-            
-            <!-- podem estilizar como quiserem todos esses h2, só peço que testem deixar todas as letras das perguntas em maiusculo ou apenas a primeira letra -->
-            <div class="caixa-perguntas-respostas">
-                <h2 class="perguntas">quem sou eu?</h2> 
-                <p class="respostas">Me chamo Cíntia, tenho 55 anos e sou de São Paulo, onde sempre morei. Sou casada, mãe de quatro filhos e avó de quatro netos lindos. Amo minha família e também cuidar de mim, porque sei que preciso estar bem para cuidar de quem amo.
-                Acordo às 4:30 da manhã para chegar na academia às 5:15, onde cuido do meu corpo e da minha mente antes de começar o dia. Sou apaixonada pelo meu trabalho e gosto de equilibrar tudo da melhor forma possível.
-                Sou uma mulher positiva! Se algo inesperado acontece, faz parte do meu crescimento. Sei reconhecer meus erros e acertos, e entendo que algumas escolhas não têm volta. Mas sigo em frente, sonhando, às vezes me perdendo, às vezes me encontrando, e vivendo a vida com alegria!</p>
+        <section id="sobre-mim" class="sobre-mim-container">
+          <img
+            class="cintia-almeida"
+            src="Components/Images/Cintia/cintiaalmeida-sobremim.png"
+            alt="Outra foto da psicóloga Cíntia Almeida, com as mesmas características físicas e de ambiente descritos na primeira foto."
+          />
 
-                <h2 class="perguntas">qual a minha área de atuação?</h2>
-                <p class="respostas">Atuo na Psicologia Clínica, ajudando a compreender e tratar questões emocionais e comportamentais, promovendo saúde e bem-estar. Como especialista em avaliações neuropsicológicas, identifico déficits cognitivos e psicológicos causados por lesões ou doenças que afetam o funcionamento cerebral.</p>
-            
-                <h2 class="perguntas">quais as principais características do meu atendimento?</h2>
-                <p class="respostas">Meu atendimento como psicóloga é focado em analisar e compreender os comportamentos, pensamentos, valores e emoções de cada paciente. No processo terapêutico, auxilio na identificação de sentimentos e pensamentos, promovendo reflexões que possibilitem mudanças positivas no comportamento.</p>
+          <div class="caixa-perguntas-respostas">
+            <p id="texto-descritivo">
+              aperte em uma pergunta para ver a sua resposta
+            </p>
+            <h2 class="perguntas">quem sou eu?</h2>
+            <p class="respostas">
+              Me chamo Cíntia, tenho 55 anos e sou de São Paulo, onde sempre
+              morei. Sou casada, mãe de quatro filhos e avó de quatro netos
+              lindos. Amo minha família e também cuidar de mim, porque sei que
+              preciso estar bem para cuidar de quem amo. Acordo às 4:30 da manhã
+              para chegar na academia às 5:15, onde cuido do meu corpo e da
+              minha mente antes de começar o dia. Sou apaixonada pelo meu
+              trabalho e gosto de equilibrar tudo da melhor forma possível. Sou
+              uma mulher positiva! Se algo inesperado acontece, faz parte do meu
+              crescimento. Sei reconhecer meus erros e acertos, e entendo que
+              algumas escolhas não têm volta. Mas sigo em frente, sonhando, às
+              vezes me perdendo, às vezes me encontrando, e vivendo a vida com
+              alegria!
+            </p>
 
-                <h2 class="perguntas">o que me motivou a ser psicóloga?</h2>
-                <p class="respostas">Fui motivada pelos serviços voluntários, onde percebi a importância de adquirir mais conhecimento para ajudar pessoas em suas necessidades, especialmente aquelas em situação de vulnerabilidade.</p>
-            
-                <h2 class="perguntas">onde me formei e o que cursei?</h2>
-                <p class="respostas">Me formei em Psicologia pela faculdade Nove de Julho. Fiz pós-graduação em Neuropsicologia na Instituição São Camilo e uma segunda especialização em Transtorno do Espectro Autista na PUC. Atualmente, continuo me aperfeiçoando por meio de cursos curtos e presenciais.</p>
-            </div>
+            <h2 class="perguntas">qual a minha área de atuação?</h2>
+            <p class="respostas">
+              Atuo na Psicologia Clínica, ajudando a compreender e tratar
+              questões emocionais e comportamentais, promovendo saúde e
+              bem-estar. Como especialista em avaliações neuropsicológicas,
+              identifico déficits cognitivos e psicológicos causados por lesões
+              ou doenças que afetam o funcionamento cerebral.
+            </p>
+
+            <h2 class="perguntas">
+              quais as principais características do meu atendimento?
+            </h2>
+            <p class="respostas">
+              Meu atendimento como psicóloga é focado em analisar e compreender
+              os comportamentos, pensamentos, valores e emoções de cada
+              paciente. No processo terapêutico, auxilio na identificação de
+              sentimentos e pensamentos, promovendo reflexões que possibilitem
+              mudanças positivas no comportamento.
+            </p>
+
+            <h2 class="perguntas">o que me motivou a ser psicóloga?</h2>
+            <p class="respostas">
+              Fui motivada pelos serviços voluntários, onde percebi a
+              importância de adquirir mais conhecimento para ajudar pessoas em
+              suas necessidades, especialmente aquelas em situação de
+              vulnerabilidade.
+            </p>
+
+            <h2 class="perguntas">onde me formei e o que cursei?</h2>
+            <p class="respostas">
+              Me formei em Psicologia pela faculdade Nove de Julho. Fiz
+              pós-graduação em Neuropsicologia na Instituição São Camilo e uma
+              segunda especialização em Transtorno do Espectro Autista na PUC.
+              Atualmente, continuo me aperfeiçoando por meio de cursos curtos e
+              presenciais.
+            </p>
+          </div>
         </section>
 
         <!-- depoimentos -->
-        <section id="depoimentos" class="depoimento">
-            <p id="texto-motivacional">Cuidar da mente é um ato de coragem — e todo recomeço começa por dentro.</p>
-            <p id="texto-descritivo">passe o mouse em cima de um depoimento para vê-lo com maior destaque</p>
-            <!-- cards de depoimento -->
-            <div class="depoimentos-card-principal"> <!-- div principal que vai unir todos os cards -->
-                <!-- primeiro card --> 
-                <div class="depoimentos-card-container">
-                    <!-- cabeçalho do card -->
-                     <div>
-                        <header>
-                            <div>
-                                <img class="foto-paciente" src="Components/Images/Cintia/foto1.jpg" alt="foto do paciente">
-                                <h3 class="paciente">nome do paciente</h3>
-                            </div>
-                        </header>
-                            <!-- avaliação -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, dolore unde. Illo dolore atque vel nam optio. Aspernatur, voluptatibus? Exercitationem, autem sunt modi reiciendis molestias aut pariatur adipisci tenetur dolore!</p>
-                            <div class="avaliacao">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                              </div>
-                    </div>
+        <section id="depoimentos" class="depoimento-container">
+          <p id="texto-motivacional">
+            Cuidar da mente é um ato de coragem — e todo recomeço começa por
+            dentro.
+          </p>
+          <p id="texto-descritivo">
+            passe o mouse em cima de um depoimento para vê-lo com maior destaque
+          </p>
+          <!-- cards de depoimento -->
+          <div class="depoimentos-card-principal">
+            <!-- div principal que vai unir todos os cards -->
+            <!-- primeiro card -->
+            <div class="depoimentos-card-container">
+              <!-- cabeçalho do card -->
+              <div>
+                <header>
+                  <img
+                    class="foto-paciente"
+                    src="Components/Images/Cintia/foto1.jpg"
+                    alt="foto do paciente"
+                  />
+                  <h3 class="paciente">nome do paciente</h3>
+                </header>
+                <!-- avaliação -->
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Asperiores, dolore unde. Illo dolore atque vel nam optio.
+                  Aspernatur, voluptatibus? Exercitationem, autem sunt modi
+                  reiciendis molestias aut pariatur adipisci tenetur dolore!
+                </p>
+                <div class="avaliacao">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
                 </div>
+              </div>
+            </div>
 
-                <!-- segundo card --> 
-                <div class="depoimentos-card-container">
-                    <!-- cabeçalho do card -->
-                    <header>
-                        <div>
-                            <img class="foto-paciente" src="Components/Images/Cintia/foto1.jpg" alt="foto do paciente">
-                            <h3 class="paciente">nome do paciente</h3>
-                        </div>
-                    </header>
-                    <!-- avaliação -->
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, dolore unde. Illo dolore atque vel nam optio. Aspernatur, voluptatibus? Exercitationem, autem sunt modi reiciendis molestias aut pariatur adipisci tenetur dolore!</p>
-                     <div class="avaliacao">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                </div>
+            <!-- segundo card -->
+            <div class="depoimentos-card-container">
+              <!-- cabeçalho do card -->
+              <header>
+                <img
+                  class="foto-paciente"
+                  src="Components/Images/Cintia/foto1.jpg"
+                  alt="foto do paciente"
+                />
+                <h3 class="paciente">nome do paciente</h3>
+              </header>
+              <!-- avaliação -->
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Asperiores, dolore unde. Illo dolore atque vel nam optio.
+                Aspernatur, voluptatibus? Exercitationem, autem sunt modi
+                reiciendis molestias aut pariatur adipisci tenetur dolore!
+              </p>
+              <div class="avaliacao">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
 
-                <!-- terceiro card --> 
-                <div class="depoimentos-card-container">
-                    <!-- cabeçalho do card -->
-                    <header>
-                        <div>
-                            <img class="foto-paciente" src="Components/Images/Cintia/foto1.jpg" alt="foto do paciente">
-                            <h3 class="paciente">nome do paciente</h3>
-                        </div>
-                    </header>
-                    <!-- avaliação -->
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, dolore unde. Illo dolore atque vel nam optio. Aspernatur, voluptatibus? Exercitationem, autem sunt modi reiciendis molestias aut pariatur adipisci tenetur dolore!</p>
-                     <div class="avaliacao">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                </div>
+            <!-- terceiro card -->
+            <div class="depoimentos-card-container">
+              <!-- cabeçalho do card -->
+              <header>
+                <img
+                  class="foto-paciente"
+                  src="Components/Images/Cintia/foto1.jpg"
+                  alt="foto do paciente"
+                />
+                <h3 class="paciente">nome do paciente</h3>
+              </header>
+              <!-- avaliação -->
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Asperiores, dolore unde. Illo dolore atque vel nam optio.
+                Aspernatur, voluptatibus? Exercitationem, autem sunt modi
+                reiciendis molestias aut pariatur adipisci tenetur dolore!
+              </p>
+              <div class="avaliacao">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
 
-                <!-- quarto card --> 
-                <div class="depoimentos-card-container">
-                    <!-- cabeçalho do card -->
-                    <header>
-                        <div>
-                            <img class="foto-paciente" src="Components/Images/Cintia/foto1.jpg" alt="foto do paciente">
-                            <h3 class="paciente">nome do paciente</h3>
-                        </div>
-                    </header>
-                    <!-- avaliação -->
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, dolore unde. Illo dolore atque vel nam optio. Aspernatur, voluptatibus? Exercitationem, autem sunt modi reiciendis molestias aut pariatur adipisci tenetur dolore!</p>
-                     <div class="avaliacao">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                </div>
+            <!-- quarto card -->
+            <div class="depoimentos-card-container">
+              <!-- cabeçalho do card -->
+              <header>
+                <img
+                  class="foto-paciente"
+                  src="Components/Images/Cintia/foto1.jpg"
+                  alt="foto do paciente"
+                />
+                <h3 class="paciente">nome do paciente</h3>
+              </header>
+              <!-- avaliação -->
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Asperiores, dolore unde. Illo dolore atque vel nam optio.
+                Aspernatur, voluptatibus? Exercitationem, autem sunt modi
+                reiciendis molestias aut pariatur adipisci tenetur dolore!
+              </p>
+              <div class="avaliacao">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
 
-                <!-- quinto card --> 
-                <div class="depoimentos-card-container">
-                    <!-- cabeçalho do card -->
-                    <header>
-                        <div>
-                            <img class="foto-paciente" src="Components/Images/Cintia/foto1.jpg" alt="foto do paciente">
-                            <h3 class="paciente">nome do paciente</h3>
-                        </div>
-                    </header>
-                    <!-- avaliação -->
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, dolore unde. Illo dolore atque vel nam optio. Aspernatur, voluptatibus? Exercitationem, autem sunt modi reiciendis molestias aut pariatur adipisci tenetur dolore!</p>
-                     <div class="avaliacao">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                </div>
+            <!-- quinto card -->
+            <div class="depoimentos-card-container">
+              <!-- cabeçalho do card -->
+              <header>
+                <img
+                  class="foto-paciente"
+                  src="Components/Images/Cintia/foto1.jpg"
+                  alt="foto do paciente"
+                />
+                <h3 class="paciente">nome do paciente</h3>
+              </header>
+              <!-- avaliação -->
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Asperiores, dolore unde. Illo dolore atque vel nam optio.
+                Aspernatur, voluptatibus? Exercitationem, autem sunt modi
+                reiciendis molestias aut pariatur adipisci tenetur dolore!
+              </p>
+              <div class="avaliacao">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
 
-                <!-- sexto card --> 
-                <div class="depoimentos-card-container">
-                    <!-- cabeçalho do card -->
-                    <header>
-                        <div>
-                            <img class="foto-paciente" src="Components/Images/Cintia/foto1.jpg" alt="foto do paciente">
-                            <h3 class="paciente">nome do paciente</h3>
-                        </div>
-                    </header>
-                    <!-- avaliação -->
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, dolore unde. Illo dolore atque vel nam optio. Aspernatur, voluptatibus? Exercitationem, autem sunt modi reiciendis molestias aut pariatur adipisci tenetur dolore!</p>
-                     <div class="avaliacao">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                </div>
-             </div>
-        </section>
-
-        <!-- contatos/agendamentos -->
-        <section id="agenda"> 
-            <h3 class="titulo-agenda">agendamento</h3> <!-- podem estilizar como quiserem, só deixem todas as letras em maiusculo -->
-            <p class="descricao-agenda">Horários: Entre em contato comigo para maiores informações!</p>
-              <a class="botao-agenda" href="https://wa.me/5511947860528" target="_blank">Agende a sua consulta</a></li>
+            <!-- sexto card -->
+            <div class="depoimentos-card-container">
+              <!-- cabeçalho do card -->
+              <header>
+                <img
+                  class="foto-paciente"
+                  src="Components/Images/Cintia/foto1.jpg"
+                  alt="foto do paciente"
+                />
+                <h3 class="paciente">nome do paciente</h3>
+              </header>
+              <!-- avaliação -->
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Asperiores, dolore unde. Illo dolore atque vel nam optio.
+                Aspernatur, voluptatibus? Exercitationem, autem sunt modi
+                reiciendis molestias aut pariatur adipisci tenetur dolore!
+              </p>
+              <div class="avaliacao">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- consultório -->
         <section id="consultorio">
-            <h1 class="titulo-consultorio">Conheça meu consultório</h1>
-            <!-- nessa div, vamos juntar todas as fotos do consultório -->
-            <div class="carrossel-instagram">
-                <div class="post">
-                    <figure><img class="post-img" src="Components/Images/Cintia/foto1.jpg" alt="">foto 1</figure>
-                </div>
-                <div class="post">
-                    <figure><img class="post-img" src="Components/Images/Cintia/foto1.jpg" alt="">foto 2</figure>
-                </div>
-                <div class="post">
-                    <figure><img class="post-img" src="Components/Images/Cintia/foto1.jpg" alt="">foto 3</figure>
-                </div>
-                <div class="post">
-                    <figure><img class="post-img" src="Components/Images/Cintia/foto1.jpg" alt="">foto 4</figure>
-                </div>
-                <div class="post">
-                    <figure><img class="post-img" src="Components/Images/Cintia/foto1.jpg" alt="">foto 5</figure>
-                </div>
-            </div>
-            <a id="maps" href="endereço-consultorio" target="_blank">google maps</a>
-        </section>
+        <h1 class="titulo-consultorio">Conheça meu consultório</h1>
+        <!--container principal do carrossel-->
+        <div class="carrossel-container">
+        <button class="seta esquerda" onclick="mudarSlide(-1)">❮</button> <!--botão da seta para esquerda-->
+        <!--carrossel das imagens (instagram)-->
+        <div class="carrossel-instagram">
+          <!--cada post é uma imagem e sua descrição-->
+        <div class="post ativo">
+        <figure>
+          <img class="post-img" src="Components/Images/Cintia/cintia-almeida-consultorio.jpeg" alt="consultório de Cíntia Almeida" />
+          <figcaption>Meu consultório</figcaption>
+        </figure>
+         </div>
+         <div class="post">
+        <figure>
+          <img class="post-img" src="Components/Images/Cintia/cintia-almeida-livros.jpeg" alt="Livros de Cíntia Almeida" />
+          <figcaption>Meus livros de estudo</figcaption>
+        </figure>
+         </div>
+         <div class="post">
+        <figure>
+          <img class="post-img" src="Components/Images/Cintia/cintia-almeida-jaleco.jpeg" alt="Jaleco de Cíntia Almeida" />
+          <figcaption>Meu jaleco especial</figcaption>
+        </figure>
+       </div>
+         <div class="post">
+        <figure>
+          <img class="post-img" src="Components/Images/Cintia/cintia-almeida-brinquedos.jpeg" alt="Brinquedos para as crianças" />
+          <figcaption>Espaço para as crianças</figcaption>
+         </figure>
+       </div>
+         <div class="post">
+        <figure>
+          <img class="post-img" src="Components/Images/Cintia/cintia-almeida-cafe.jpeg" alt="Espaço para tomar um café" />
+          <figcaption>Espaço para um café</figcaption>
+        </figure>
+      </div>
+      <div class="post">
+        <figure>
+          <img class="post-img" src="Components/Images/Cintia/cintia-almeida-estante.jpeg" alt="Estante onde fica os livros de Cíntia Almeida" />
+          <figcaption>Minha estante especial</figcaption>
+        </figure>
+      </div>
+      <div class="post">
+        <figure>
+          <img class="post-img" src="Components/Images/Cintia/cintia-almeida-entrada.jpeg" alt="Entrada do consultório de Cintia Almeida" />
+          <figcaption>Seja bem-vindo!</figcaption>
+        </figure>
+      </div>
+      <div class="post">
+        <figure>
+          <img class="post-img" src="Components/Images/Cintia/cintia-almeida-jaleco-simbolo.jpeg" alt="Símbolo da psicologia no jaleco de Cíntia Almeida" />
+          <figcaption>Minha paixão!</figcaption>
+        </figure>
+      </div>
+      <div class="post">
+        <figure>
+          <img class="post-img" src="Components/Images/Cintia/cintia-almeida-livros2.jpeg" alt="Livros de psicologia de Cíntia Almeida" />
+          <figcaption>Meus livros de psicologia</figcaption>
+        </figure>
+      </div>
+      <div class="post">
+        <figure>
+          <img class="post-img" src="Components/Images/Cintia/cintia-almeida-sala.jpeg" alt="Sala de Cíntia Almeida" />
+          <figcaption>Meu e seu espaço</figcaption>
+        </figure>
+      </div>
+     </div>
+    
+    <button class="seta direita" onclick="mudarSlide(1)">❯</button> <!--botão da seta para direita-->
+    </div>
+
+    <a
+    id="maps"
+    href="https://www.google.com/maps/@-23.6813702,-46.7665378,3a,90y,315.43h,116.78t/data=!3m7!1e1!3m5!1sM3hg94k6dpk12Sw3h7E59A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-26.782298315790655%26panoid%3DM3hg94k6dpk12Sw3h7E59A%26yaw%3D315.4312241690255!7i16384!8i8192?authuser=0&entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+    target="_blank"
+     >google maps</a>
+     </section>
 
         <!-- faq -->
-        <section id="faq">
-            <!-- podem estilizar como quiserem todos esses h2, só peço que testem deixar todas as letras das perguntas em maiusculo ou apenas a primeira letra -->
-            <h2>como funciona o agendamento?</h2>
+        <section id="faq" class="faq-container">
+          <h2 class="faq-titulo">perguntas frequentes</h2>
+          <p class="faq-subtitulo">
+            clique em uma pergunta para ver a resposta
+          </p>
+
+          <div class="faq-item">
+            <h3>como funciona o agendamento?</h3>
             <p>Os agendamentos das consultas são tratados via WhatsApp.</p>
+          </div>
 
-            <h2>as consultas são presenciais ou on-line?</h2>
-            <p>Ambos os casos! </p>
-            
-            <h2>Qual a duração média das sessões?</h2>
-            <p>A sessões duram, normalmente, 50 minutos, podendo se estender até 1h</p>
+          <div class="faq-item">
+            <h3>as consultas são presenciais ou on-line?</h3>
+            <p>Ambos os casos!</p>
+          </div>
 
-            <h2>Quais os tipos de problema que você trata?</h2>
-            <p>A confirmar...</p>
+          <div class="faq-item">
+            <h3>qual a duração média das sessões?</h3>
+            <p>
+              A sessões duram, normalmente, 50 minutos, podendo se estender até
+              1h
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>quais os tipos de problema que você trata?</h3>
+            <p>
+              A minha tarefa é tratar questões relacionadas à saúde mental, como
+              ansiedade, depressão, estresse, e outros distúrbios psicológicos.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>quais os horários de atendimento?</h3>
+            <p>
+              Segunda, Terça, Quinta e Sábado, às 08h00 às 17h (presencial). Online até às 21h.
+            </p>
+          </div>
         </section>
-    </main>
-</body>
+      </main>
+      <footer class="rodape">
+        <p class="titulo-footer">Pronto(a) para iniciar a sua jornada? Enre em contato!</p>
+        <div class="btn-social-footer">
+         <ul class="btn-itens">
+          <li><a href="https://wa.me/5511947860528" target="_blank"> <i class="fa-solid fa-phone"></i></a></li>
+          <li><a href="https://instagram.com/cintiaalmeidapsico"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="mailto:cintia.a.psicologa@gmail.com"> <i class="fa-solid fa-envelope"></i></a></li>
+         </ul>
+        </div>
+        </div>
+      </footer>
+    </div> <!-- fim do wrapper -->
+    <script src="JavaScript/script.js"></script>
+    <!-- link para o JS (já ativo) -->
+  </body>
 </html>

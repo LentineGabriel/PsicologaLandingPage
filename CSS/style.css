@@ -1,300 +1,636 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap");
 
+/* Resolução Dispositivo-Padrão: 1366x768 (Monitor de notebooks) */
 /* CONFIGURAÇÃO GLOBAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+section {
+  scroll-margin-top: 13rem;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  animation: fadeInBody 1s ease-in;
+}
 ul {
   list-style: none;
-  text-align: center;
-  display: inline-flex;
-  gap: 60px;
-  font-family: "Teko";
 }
 a {
+  color: #ffffff;
   text-decoration: none;
-  color: inherit; /* mantém a cor original */
+  font-weight: bold;
 }
 
-/* HEADER */
+/* WRAPPER para resolução base (1366x768) */
+.wrapper {
+  width: 100%;
+  max-width: 136.6rem;
+  margin: 0 auto;
+}
+
+.sobre-mim-container,
+.depoimento-container,
+#consultorio,
+.faq-container {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* KeyFrames */
+/* Inicialização do Site */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* botão Fale Comigo */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* texto motivacional */
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* NAV BAR */
 .cabecalho {
-  height: 100px;
-  text-align: center;
-  background-color: #2be8f9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* navbar na frente de tudo */
+  display: flex;
+  justify-content: center;
+  background-color: #226785;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  height: 6rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
 }
-
-.ciano-claro {
-  color: #00ffff;
+.nav-list {
+  display: flex;
+  margin: 0;
+  padding: 1rem;
+  gap: 5rem;
 }
-
 .nav-item {
-  transition: 1s all;
-  font-weight: 800;
-  color: white;
+  font-family: "Teko", sans-serif;
+  color: #ffffff;
+  font-size: clap(2rem, 2.5vw, 3rem);
   text-transform: uppercase;
-  margin-top: 30px;
-  padding: 5px 15px;
-  font-size: 30px;
-}
-.nav-item:hover {
-  color: #0e8cbd;
-  transition: 0.2s all;
-}
-
-.botao-1 {
-  background-color: #0fb3d0;
-  padding: 5px 15px;
-  border-radius: 10px;
-  font-size: 20px;
-  margin-left: 30px;
-}
-
-.botao-1:hover {
-  background-color: #0984b4;
   cursor: pointer;
 }
+.botao-FaleComigo {
+  background-color: #0fb3d0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 3.5rem;
+  padding: 12px 2.8rem;
+  margin-top: -10px;
+  border-radius: 1rem;
+  margin-left: 5rem;
+}
 
-.cor-fonte:hover {
-  color: white;
+/* Animações do Cabeçalho */
+.nav-item a:hover {
+  color: #00ffff;
+  transition: 0.2s all;
+}
+.botao-FaleComigo:hover {
+  background-color: #00363e;
+  transition: 0.2s all;
+  animation: pulse 0.5s;
+}
+.cor-fonte-branco a:hover {
+  color: #ffffff;
 }
 
 /* BODY */
-/*  Inicio */
+/* início do site */
 .inicio-do-site {
-  height: 100%;
+  padding-top: 7rem;
+  margin: 0;
 }
-
+.container-inicial {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 120rem;
+  margin: 8rem auto 0;
+}
 #logo {
-  width: 200px;
-  height: 250px;
-  position: relative;
-  top: 60px;
-  left: 275px;
+  height: 30rem;
+  width: auto;
+  margin-left: 1rem;
 }
-.texto-chamativo {
-  font-family: "Roboto";
-  color: black;
-  font-style: oblique;
-  text-align: center;
-  position: relative;
-  font-size: 30px;
-  margin-left: 50%;
-  margin-top: 20px;
-  top: -400px;
-  bottom: 250px;
-  right: 50px;
+.textos {
+  max-width: 75rem;
+  text-align: left;
+  margin-left: 5.7rem;
 }
-.grande {
-  font-size: 45px;
+.texto-chamativo-maior {
+  font-family: "Sansita", sans-serif;
+  color: #226785;
+  font-size: clap(3rem, 2.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  white-space: nowrap;
 }
-.ciano {
-  color: #00ffff;
+.texto-chamativo-menor {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: clap(1.8rem, 2vw, 2.6rem);
+  line-height: 1.6;
 }
 .btn-social {
   display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
-  width: 80%;
-  margin-top: -200px;
-  margin-right: 500px;
+  justify-content: flex-end;
+  max-width: 136.6rem;
+  width: 100%;
+  margin: 2rem auto 0 auto;
+  padding-right: 20rem;
+  box-sizing: border-box;
+}
+.btn-social ul {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: wrap;
 }
 .btn-social ul li {
-  position: relative;
+  position: relative; /* não tirar */
   background: #226785;
-  margin: 5px;
-  padding: 5px;
-  z-index: 1;
+  border-radius: 0.5rem;
   overflow: hidden;
-  border-radius: 3px;
-  font-size: 1.5rem;
-  text-align: center;
+  z-index: 1;
+  transition: 0.4s;
+  width: 20rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.btn-social ul li a {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  display: block;
-  text-decoration: none;
-  color: #ffffff;
-  transition: 4s;
+.btn-social ul li:hover {
+  transform: translateY(-0.5rem);
 }
 .btn-social ul li::before {
-  transition: 0.4s;
-  position: absolute;
   content: "";
+  position: absolute; /* não tirar */
   width: 100%;
   height: 100%;
   top: 90%;
   left: 0;
   background: #00ffff;
   z-index: -1;
-  transform: scale(1);
-  transition: 4s;
+  transition: 0.4s;
 }
 .btn-social ul li:hover::before {
-  transition: 0.4s;
   top: 0%;
+}
+.btn-social ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.4s;
+  gap: 1rem;
 }
 .btn-social ul li a:hover {
   color: #555555;
 }
-.icone-whatsapp {
-  height: 45px;
+.icone-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 }
-.icone-instagram {
-  height: 45px;
+.icone-container img {
+  height: 3rem;
+  width: auto;
 }
+.icone-container figcaption {
+  text-transform: uppercase;
+  font-size: clap(1.2rem, 1.5vw, 1.6rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+.icone-whatsapp,
+.icone-instagram,
 .icone-gmail {
-  height: 45px;
+  height: 4.5rem;
 }
 
-/* Sobre Mim */
-.sobremim-ciano2 {
-  background-color: #c4ffff;
-  height: 1100px;
+/* sobre mim */
+.sobre-mim-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 136.6rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 4rem 2rem;
+  gap: 4rem;
+  flex-wrap: wrap;
+  background-color: #226785;
 }
 .cintia-almeida {
-  width: 35rem;
-  height: 55rem;
-  border-radius: 30px;
-  margin: 50px 270px;
-  position: relative;
-  top: 25px;
-  right: 30px;
-  opacity: 1;
+  max-width: 45rem;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  height: 70rem;
 }
 .caixa-perguntas-respostas {
-  position: relative;
-  right: 50px;
+  color: #000000;
+  flex: 1;
+  max-width: 80rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-left: 15rem;
 }
 .perguntas {
-  color: #00cbcc;
-  display: flex;
-  font-family: "Sansita";
+  font: "Sansita", sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
-  font-weight: 600;
-  margin-left: 60%;
+  color: #ffffff;
+  text-shadow: 0 0 1px #000000;
+  margin-top: 2rem;
   cursor: pointer;
 }
+.perguntas:hover {
+  color: #00ffff;
+  text-shadow: 0 0 3px #34f3f3;
+  transition: 0.2s all;
+}
 .respostas {
-  font-family: "Roboto";
-  margin-left: 60%;
-  margin-bottom: 25px;
-  font-weight: 300;
-  font-size: 18px;
-  transition: all 0.3s ease;
-  padding: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 /* depoimentos */
+.depoimento-container {
+  max-width: 136.6rem;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: visible;
+}
 #texto-motivacional {
+  color: #226785;
   font-family: "Sansita";
-  font-size: 30px;
+  font-weight: 600;
+  font-size: 3rem;
   text-align: center;
-  color: #00cbcc;
-  margin-top: 50px;
+  animation: breathe 4s ease-in-out infinite;
 }
 #texto-descritivo {
-  font-family: "Sansita";
-  font-weight: 100;
-  font-size: 20px;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  color: black;
-  margin-top: 40px;
 }
 .depoimentos-card-principal {
   display: flex;
-  margin: 0 auto;
-  max-width: 100%;
-  height: 350px;
-  gap: 10px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  overflow: visible;
+  min-height: 40rem;
+  margin-top: 6rem;
 }
 .depoimentos-card-container {
   flex: 1;
-  padding: 80px;
-  height: 370px;
-  border-radius: 30px;
-  background-color: #8bffff;
-  transition: flex 0.6s ease-in-out, transform 0.6s ease-in-out;
-  box-shadow: 0.6s ease-in-out;
-  opacity: 0.6s ease-in-out;
-  transform-origin: center center;
+  min-width: 0;
+  background-color: #226785;
+  border-radius: 3rem;
+  padding: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s,
+    opacity 0.4s ease;
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
+  position: relative; /* não tirar, isso vai garantir que z-index funcione no hover */
+  height: 100%; /* o card vai acompanhar a altura do container */
+  color: white;
+  font-family: "Sansita";
+}
+.depoimentos-card-container:hover {
+  box-shadow: 0 0 2.5rem rgba(0, 255, 255, 0.4);
+}
+/* quando houver foco em algum card, todos os outros recebem essa classe */
+.depoimentos-card-container.dim {
+  opacity: 0.3;
+  filter: blur(0.15rem);
+  transform: scale(0.95);
+}
+/* quando o card estiver em foco, ele recebe essa classe */
+.depoimentos-card-container.highlight {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+  width: 32rem;
+  height: auto; /* o card vai crescer na vertical conforme a quantidade de conteúdo */
   cursor: pointer;
 }
-/* quando passar o mouse em cima de um card, ele espande e mostra mais informações */
-.depoimentos-card-container:hover {
-  flex: 2;
-  transform: scale(1.05);
-  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.15);
-  z-index: 1;
+.depoimentos-card-container header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
-/* os outros cards se encolhem */
-.depoimentos-card-container:hover .box:not(:hover) {
-  flex: 0.8;
-  opacity: 0.6;
-  transform: scale(0.95);
-  filter: blur(0.5px);
+.foto-paciente {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .paciente {
-  display: flex;
-  position: relative;
-  font-size: medium;
-  font-weight: 900;
+  font-weight: 800;
   text-transform: uppercase;
-  left: 30px;
-  bottom: 30px;
+  font-size: 1.4rem;
+  margin: 0;
 }
-/* contatos/agendamentos */
-/* consultorio */
-.titulo-consultorio {
-  font-family: "Sansita";
+.depoimento-container p {
+  font-size: 1.3rem;
+  line-height: 1.3;
+  text-align: left;
+}
+.avaliacao {
+  color: gold;
+  font-size: 1.4rem;
   text-align: center;
-  text-transform: uppercase;
-  font-size: 30px;
-  margin-top: 50px;
-  color: #00cbcc;
+  margin-top: 1.5rem;
 }
+
+/* consultório */
+#consultorio {
+  max-width: 136.6rem; /* largura máxima do container */
+  margin: 0 auto; /*centraliza a seção*/
+  padding: 4rem 2rem; /*espaçamento interno */
+  text-align: center; /*centraliza o texto */
+  background-color: #226785; /*cor de fundo da seção */
+}
+
+.titulo-consultorio {
+  font-family: "Sansita", sans-serif; /*define a fonte*/
+  color: #ffffff; /*cor do texto*/
+  font-size: 4rem; /*tamanho da fonte*/
+  margin-bottom: 3rem; /*espaço abaixo do título*/
+  text-transform: uppercase; /*transofrmação do texto para maiúsculas*/
+}
+
+/*container do carrossel (responsável por conter as imagens*/
+.carrossel-container {
+  position: relative; /*necessário para posicionar os botões e as imagens*/
+  max-width: 700px; /*largura máxima*/
+  margin: 60px auto; /*espaçamento externo e centralizado*/
+  padding: 0 60px; /* espaço entre as imagens e as setas */
+  overflow: hidden; /*oculta as imagens fora do container*/
+  transform-style: preserve-3d; /*permite que os elementos dentro do container tenham profundidade*/
+}
+
+/*container que abriga as imagens*/
 .carrossel-instagram {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding: 1rem;
-  scroll-behavior: smooth;
-}
-.post {
-  flex: 10 50 80%; /* Tamanho de cada "post" */
-  scroll-snap-align: center;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.post-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-}
-#maps {
+  position: relative;
+  height: 450px; /*altura do carrossel*/
   display: flex;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase;
-  font-family: "Teko";
+}
+
+/*cada post (imagem e descrição)*/
+.post {
+  position: absolute; /*permite sobreposição das imagens*/
+  opacity: 0; /*inicialmente invisível*/
+  transition: all 0.8s ease; /*transições suaves ao mudar de estado*/
+  pointer-events: none; /*desabilita interações enquanto o post não está ativo*/
+  z-index: 0; /*coloca o post atrás dos demais por padrão*/
+  transform: scale(0.8); /*reduz o tamanho da imagem*/
+}
+
+/*estilo do post ativo (imagem central em destaque)*/
+.post.ativo {
+  opacity: 1; /*totalmente visível*/
+  transform: translateX(-50%) scale(1); /*centraliza horizontalmente e mantém o tamanho original*/
+  left: 50%; /*posiciona o centro da imagem no meio do container*/
+  z-index: 3; /*coloca acima dos outros*/
+  pointer-events: auto; /*permite interações (ex:hover)*/
+}
+
+/*estilo do post anterior (imagem a direita, opaca e reduzida*/
+.post.anterior {
+  opacity: 0.4; /*mais transparente*/
+  transform: translateX(-140%) scale(0.8); /*posiciona mais a esquerda e reduz o tamanho*/
+  left: 50%; /*referência ao centro para facilitar o cálculo com translate*/
+  z-index: 1; /*fica abaixo da imagem principal*/
+}
+
+/*estilo do post seguinte (imagem a direita, opaca e reduzida)*/
+.post.proximo {
+  opacity: 0.4; /*mais transparente*/
+  transform: translateX(40%) scale(0.8); /*posiciona a direita e reduz o tamanho*/
+  left: 50%; /*referência ao centro*/
+  z-index: 1; /*fica abaixo da imagem principal*/
+}
+
+/*efeito de zoom ao passar o mouse na imagem*/
+.post:hover .post-img {
+  transform: scale(1.05); /*aumenta levemente a imagem*/
+}
+
+/*estilo da legenda (descrição) de cada imagem*/
+.post figcaption {
+  margin-top: 0.8rem; /*espaço entre a imagem e o texto*/
+  font-size: 1.2rem; /*tamanho inicial da fonte*/
+  color: #ffffff; /* Cor branca para contraste com fundo escuro */
+  text-align: center; /*centraliza o texto*/
+  transition: font-size 0.3s ease; /*suaviza a transição de tamanho*/
+  font-family: "sansita"; /*define a fonte da legenda*/
+}
+
+/*aumenta o tamanho da fonte da legenda ao passar o mouse*/
+.post:hover figcaption {
+  font-size: 1.35rem;
+}
+
+/*estilização dos botões de seta (navegação)*/
+.seta {
+  position: absolute; /*permite posicionamento preciso*/
+  top: 50%; /*centraliza verticalmente*/
+  transform: translateY(-50%); /*ajuste fino para centralização*/
+  font-size: 2.4rem; /*tamanho do ícone da seta*/
+  background-color: rgba(255, 255, 255, 0.9); /* branco com transparência */
+  color: #226785; /* azul do tema */
+  border: none; /*remove bordas padrão*/
+  padding: 1rem 1.4rem; /*espaçamento interno*/
+  cursor: pointer; /*icone da mãozinha ao passar o mouse*/
+  z-index: 10; /*garante que as setas fiquem acima de todos os elementos*/
+  border-radius: 50%; /*formato circular*/
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /*sombra suave*/
+  transition: background-color 0.3s ease, transform 0.2s ease; /*suaviza as transições*/
+}
+
+/*efeito ao passar o mouse sobre as setas*/
+.seta:hover {
+  background-color: #ffffff; /*fica um branco mais sólido*/
+  transform: translateY(-50%) scale(1.1); /*aumenta um pouco*/
+}
+
+/*efeito ao clicar nas setas*/
+.seta:active {
+  transform: translateY(-50%) scale(0.95); /*diminui levemente para simular clique */
+}
+
+/*posição da seta da esquerda*/
+.seta.esquerda {
+  left: 10px; /*posicionada um pouco fora da imagem a esquerda*/
+}
+
+/*posição da seta da direita*/
+.seta.direita {
+  right: 10px; /*posicionada um pouco fora da imagem a direita*/
+}
+
+#maps {
+  display: inline-block;
+  padding: 1.2rem 4rem;
+  background-color: #0fb3d0;
   color: white;
-  background-color: #226785;
-  font-size: 2.5rem;
-  border-radius: 10px;
-  margin: 15px 500px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 1rem;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 #maps:hover {
-  transition: 0.4s;
-  background-color: #00ffff;
+  background-color: #00363e;
+  animation: pulse 2.5s infinite;
 }
-/* faq */
 
-/* FOOTER */
+/* faq */
+.faq-container {
+  max-width: 100%;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  font-family: "Sansita", sans-serif;
+}
+.faq-titulo {
+  text-align: center;
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.faq-subtitulo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 6rem;
+  color: #555555;
+  text-transform: uppercase;
+}
+.faq-item {
+  border-bottom: 0.1rem solid #cccccc;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+.faq-item h3 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  color: #222222;
+  text-align: center;
+  text-transform: uppercase;
+}
+.faq-item h3:hover {
+  cursor: pointer;
+  color: #0fb3d0;
+}
+.faq-item p {
+  font-size: 1.6rem;
+  color: #333333;
+  line-height: 1.6;
+  max-height: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+/* footer */
+.rodape {
+  background-color: #226785;
+}
+
+.titulo-footer {
+  text-align: center;
+  color: white;
+  font-family: "sansita";
+  font-size: 25px;
+}
+
+.btn-social-footer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-right: 20rem;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.btn-itens {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}

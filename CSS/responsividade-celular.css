@@ -1,0 +1,135 @@
+/*responsividade para celulares*/
+@media screen and (max-width: 480px) {
+  .cabecalho {
+    position: static;
+    top: auto;
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .nav-item {
+    font-size: 2.2rem;
+  }
+
+  .botao-FaleComigo {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .container-inicial {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  #logo {
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .textos {
+    margin-left: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .texto-chamativo-maior {
+    font-size: 2.4rem;
+    white-space: normal;
+  }
+
+  .texto-chamativo-menor {
+    font-size: 2rem;
+  }
+
+  .btn-social {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .btn-social ul {
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-social ul li {
+    width: 180px;
+    height: 55px;
+  }
+
+  .icone-container figcaption {
+    font-size: 1.4rem;
+  }
+
+  .sobre-mim-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .cintia-almeida {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .caixa-perguntas-respostas {
+    margin-left: 0;
+    max-width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .depoimento-container {
+    padding: 10px;
+  }
+
+  #texto-motivacional {
+    font-size: 2.5rem;
+  }
+
+  #texto-descritivo {
+    font-size: 1.5rem;
+  }
+
+  .depoimentos-card-principal {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .depoimentos-card-container,
+  .depoimentos-card-container.highlight {
+    width: 90%;
+    transform: scale(1);
+  }
+
+  .carrossel-instagram {
+    justify-content: center;
+  }
+
+  .post {
+    width: 90%;
+  }
+
+  .faq-container {
+    padding: 0 1rem;
+  }
+
+  .faq-item h3 {
+    font-size: 2.2rem;
+  }
+
+  .faq-item p {
+    font-size: 1.8rem;
+  }
+}
