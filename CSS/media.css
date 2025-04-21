@@ -170,12 +170,12 @@
     margin-bottom: 1.5rem;
   }
 
-  .pergunta {
+  .perguntas {
     font-size: 1.4rem;
     margin-bottom: 1rem;
   }
 
-  .resposta {
+  .respostas {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
   }
@@ -262,11 +262,11 @@
   margin-bottom: 1.5rem;
   text-align: center; /* Centraliza o título da seção */
 }
-.pergunta {
+.perguntas {
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
-.resposta {
+.respostas {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   text-align: center; /* Centraliza as respostas */
