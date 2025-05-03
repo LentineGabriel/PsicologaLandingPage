@@ -591,7 +591,7 @@ a {
   margin-bottom: 1em;
   padding: 1rem 0;
 }
-.faq-pergunta{
+.faq-pergunta {
   width: 100%;
   padding: 1em;
   font-size: 1.1em;
@@ -602,16 +602,16 @@ a {
   transition: background 0.3s;
   text-transform: uppercase;
 }
-.faq-pergunta:hover{
+.faq-pergunta:hover {
   background-color: #e0e0e0;
 }
-.faq-resposta{
+.faq-resposta {
   max-height: 0;
   overflow: hidden;
   transition: max-heigh 0.3s ease;
   text-align: center;
 }
-.faq-item.active .faq-resposta{
+.faq-item.active .faq-resposta {
   max-height: 500px;
 }
 
