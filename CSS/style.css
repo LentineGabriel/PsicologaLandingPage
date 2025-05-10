@@ -611,14 +611,15 @@ a {
   width: 100%;
   padding: 1em;
   font-size: 1.1em;
-  background-color: #f0f0f0;
+  background-color: #00363e;
+  color: white;
   border: none;
   text-align: center;
   cursor: pointer;
   text-transform: uppercase;
 }
 .faq-pergunta:hover {
-  background-color: #e0e0e0;
+  background-color: #174ba4;
 }
 .faq-resposta {
   max-height: 0;
