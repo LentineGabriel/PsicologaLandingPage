@@ -1,18 +1,33 @@
 // accordion para o sobre mim
 document.querySelectorAll(".perguntas").forEach((pergunta) => {
   pergunta.addEventListener("click", () => {
-    pergunta.classList.toggle("active");
-
     const resposta = pergunta.nextElementSibling;
-    if (resposta.style.maxHeight) {
+
+    // Fecha todas as outras perguntas
+    document.querySelectorAll(".perguntas").forEach((outraPergunta) => {
+      const outraResposta = outraPergunta.nextElementSibling;
+
+      if (outraPergunta !== pergunta) {
+        outraPergunta.classList.remove("active");
+        outraResposta.style.maxHeight = null;
+        outraResposta.style.padding = "0 5px";
+      }
+    });
+
+    // Alterna a pergunta clicada
+    const isActive = pergunta.classList.contains("active");
+    if (isActive) {
+      pergunta.classList.remove("active");
       resposta.style.maxHeight = null;
-      resposta.style.padding = "0 10px";
+      resposta.style.padding = "0 5px";
     } else {
+      pergunta.classList.add("active");
       resposta.style.maxHeight = resposta.scrollHeight + "px";
-      resposta.style.padding = "10px";
+      resposta.style.padding = "5px";
     }
   });
 });
+
 
 // efeito nos depoimentos
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita:ital,wght@0,400..900;1,400..900&family=Teko:wght@300..700&display=swap");
 
 /* Resolução Dispositivo-Padrão: 1366x768 (Monitor de notebooks) */
 /* CONFIGURAÇÃO GLOBAL */
@@ -110,7 +110,7 @@ a {
 .nav-item {
   font-family: "Teko", sans-serif;
   color: #ffffff;
-  font-size: clap(2rem, 2.5vw, 3rem);
+  font-size: clamp(0.5rem, 2vw, 2rem);
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -130,11 +130,11 @@ a {
 /* Animações do Cabeçalho */
 .nav-item a:hover {
   color: #00ffff;
-  transition: 0.2s all;
+  transition: 0.2s ease;
 }
 .botao-FaleComigo:hover {
   background-color: #00363e;
-  transition: 0.2s all;
+  transition: 0.2s ease;
   animation: pulse 0.5s;
 }
 .cor-fonte-branco a:hover {
@@ -169,7 +169,7 @@ a {
 .texto-chamativo-maior {
   font-family: "Sansita", sans-serif;
   color: #226785;
-  font-size: clap(3rem, 2.5vw, 3.2rem);
+  font-size: clamp(2rem, 2vw, 3.2rem);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 2rem;
@@ -178,7 +178,7 @@ a {
 .texto-chamativo-menor {
   font-family: "Roboto", sans-serif;
   color: #000000;
-  font-size: clap(1.8rem, 2vw, 2.6rem);
+  font-size: clamp(1.5rem, 1.6vw, 2.6rem);
   line-height: 1.6;
 }
 .btn-social {
@@ -255,7 +255,7 @@ a {
 }
 .icone-container figcaption {
   text-transform: uppercase;
-  font-size: clap(1.2rem, 1.5vw, 1.6rem);
+  font-size: clamp(1.8rem, 1.5vw, 1.6rem);
   font-weight: 600;
   color: #ffffff;
   margin: 0;
@@ -279,35 +279,37 @@ a {
   gap: 4rem;
   flex-wrap: wrap;
   background-color: #226785;
+  min-height: 10rem; /* ou qualquer valor que comporte o conteúdo */
+  position: relative;
+  overflow: hidden;
 }
 .cintia-almeida {
   max-width: 45rem;
-  height: auto;
-  object-fit: contain;
-  flex-shrink: 0;
   height: 70rem;
+  padding-bottom: 300px;
 }
 .caixa-perguntas-respostas {
   color: #000000;
   flex: 1;
   max-width: 80rem;
   font-size: 1.6rem;
-  line-height: 1.5;
-  margin-left: 15rem;
+  line-height: 1.0;
+  padding-left: 15rem;
 }
 .perguntas {
-  font: "Sansita", sans-serif;
+  font-family: "Sansita", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   color: #ffffff;
   text-shadow: 0 0 1px #000000;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
   cursor: pointer;
 }
 .perguntas:hover {
   color: #00ffff;
   text-shadow: 0 0 3px #34f3f3;
-  transition: 0.2s all;
+  transition: 0.2s ease;
 }
 .respostas {
   font-family: "Roboto", sans-serif;
@@ -316,9 +318,10 @@ a {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
-  margin: 0 0 15px 0;
+  margin-top: 0.3rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
-
 /* depoimentos */
 .depoimento-container {
   max-width: 136.6rem;
@@ -329,7 +332,7 @@ a {
 }
 #texto-motivacional {
   color: #226785;
-  font-family: "Sansita";
+  font-family: "Sansita", sans-serif;
   font-weight: 600;
   font-size: 3rem;
   text-align: center;
@@ -342,6 +345,11 @@ a {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+}
+.texto-depoimento {
+  justify-content: center;
+  text-align: center;
+  
 }
 .depoimentos-card-principal {
   display: flex;
@@ -364,9 +372,11 @@ a {
   filter: none;
   transform: scale(1);
   position: relative; /* não tirar, isso vai garantir que z-index funcione no hover */
-  height: 100%; /* o card vai acompanhar a altura do container */
+  height: 600px; /* o card vai acompanhar a altura do container */
   color: white;
   font-family: "Sansita";
+  display: flex;
+  flex-direction: column;
 }
 .depoimentos-card-container:hover {
   box-shadow: 0 0 2.5rem rgba(0, 255, 255, 0.4);
@@ -404,7 +414,7 @@ a {
 .paciente {
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 0;
 }
 .depoimento-container p {
@@ -412,11 +422,17 @@ a {
   line-height: 1.3;
   text-align: left;
 }
+.conteudo-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .avaliacao {
   color: gold;
   font-size: 1.4rem;
   text-align: center;
-  margin-top: 1.5rem;
+  position: relative;
+  margin-top: auto;
 }
 
 /* consultório */
@@ -459,7 +475,7 @@ a {
 .post {
   position: absolute; /*permite sobreposição das imagens*/
   opacity: 0; /*inicialmente invisível*/
-  transition: all 0.8s ease; /*transições suaves ao mudar de estado*/
+  transition: 0.8s ease; /*transições suaves ao mudar de estado*/
   pointer-events: none; /*desabilita interações enquanto o post não está ativo*/
   z-index: 0; /*coloca o post atrás dos demais por padrão*/
   transform: scale(0.8); /*reduz o tamanho da imagem*/
@@ -502,7 +518,7 @@ a {
   color: #ffffff; /* Cor branca para contraste com fundo escuro */
   text-align: center; /*centraliza o texto*/
   transition: font-size 0.3s ease; /*suaviza a transição de tamanho*/
-  font-family: "sansita"; /*define a fonte da legenda*/
+  font-family: "Sansita" sans-serif; /*define a fonte da legenda*/
 }
 
 /*aumenta o tamanho da fonte da legenda ao passar o mouse*/
@@ -599,7 +615,6 @@ a {
   border: none;
   text-align: center;
   cursor: pointer;
-  transition: background 0.3s;
   text-transform: uppercase;
 }
 .faq-pergunta:hover {
@@ -623,7 +638,7 @@ a {
 .titulo-footer {
   text-align: center;
   color: white;
-  font-family: "sansita";
+  font-family: "Sansita", sans-serif;
   font-size: 25px;
 }
 

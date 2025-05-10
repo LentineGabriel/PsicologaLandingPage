@@ -1,53 +1,46 @@
-/*responsividade para celulares*/
-@media screen and (max-width: 480px) {
+/* iPhone SE (375px a 667px) */
+  @media (max-width: 375px) {
+  html {
+    font-size: 50%; /* Reduz base para rem */
+  }
+
   .cabecalho {
-    position: static;
-    top: auto;
     flex-direction: column;
     height: auto;
-    padding: 15px;
+    padding: 1rem;
   }
 
   .nav-list {
     flex-direction: column;
-    gap: 20px;
     align-items: center;
-  }
-
-  .nav-item {
-    font-size: 2.2rem;
+    gap: 1rem;
+    padding: 0;
   }
 
   .botao-FaleComigo {
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1.4rem;
   }
 
   .container-inicial {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin: 0 auto;
+    gap: 2rem;
+    margin: 4rem auto 0;
+    padding: 0 1rem;
   }
 
   #logo {
-    height: 200px;
-    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    max-width: 30rem;
   }
 
   .textos {
     margin-left: 0;
     text-align: center;
-    max-width: 100%;
-  }
-
-  .texto-chamativo-maior {
-    font-size: 2.4rem;
-    white-space: normal;
-  }
-
-  .texto-chamativo-menor {
-    font-size: 2rem;
   }
 
   .btn-social {
@@ -56,80 +49,66 @@
   }
 
   .btn-social ul {
-    justify-content: center;
-    gap: 10px;
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
   }
 
   .btn-social ul li {
-    width: 180px;
-    height: 55px;
-  }
-
-  .icone-container figcaption {
-    font-size: 1.4rem;
+    width: 100%;
+    height: auto;
   }
 
   .sobre-mim-container {
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+    padding: 2rem 1rem;
   }
 
   .cintia-almeida {
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
+    padding-bottom: 0;
   }
 
   .caixa-perguntas-respostas {
-    margin-left: 0;
-    max-width: 100%;
+    padding-left: 0;
     font-size: 1.4rem;
-  }
-
-  .depoimento-container {
-    padding: 10px;
-  }
-
-  #texto-motivacional {
-    font-size: 2.5rem;
-  }
-
-  #texto-descritivo {
-    font-size: 1.5rem;
   }
 
   .depoimentos-card-principal {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
   }
 
-  .depoimentos-card-container,
-  .depoimentos-card-container.highlight {
-    width: 90%;
-    transform: scale(1);
+  .depoimentos-card-container {
+    width: 100%;
+    height: auto;
   }
 
-  .carrossel-instagram {
-    justify-content: center;
+  .carrossel-container {
+    padding: 0 2rem;
+    max-width: 100%;
   }
 
-  .post {
-    width: 90%;
+  .post figcaption {
+    font-size: 1rem;
   }
 
-  .faq-container {
-    padding: 0 1rem;
+  .titulo-consultorio {
+    font-size: 2.8rem;
   }
 
-  .faq-item h3 {
+  #texto-motivacional {
     font-size: 2.2rem;
   }
 
-  .faq-item p {
-    font-size: 1.8rem;
+  #texto-descritivo {
+    font-size: 1.5rem;
   }
 }
+
+
+
+
+/* iPhone XR (414px a 896px) */
+/* iPhone 12 Pro (390px a 844px) */
+/* iPhone 14 Pro Max (430px a 932px) */

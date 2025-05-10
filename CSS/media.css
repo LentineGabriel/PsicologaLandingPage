@@ -1,3 +1,8 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 /* === Breakpoint para telas muito grandes (ex: 1920x1080 em 100%) === */
 @media screen and (min-width: 1600px) {
   html {
@@ -75,12 +80,12 @@
     margin-bottom: 1.875rem;
   }
 
-  .pergunta {
+  .faq-pergunta {
     font-size: 1.5rem;
     margin-bottom: 1.25rem;
   }
 
-  .resposta {
+  .faq-resposta {
     font-size: 1.3rem;
     margin-bottom: 1.875rem;
   }
@@ -170,12 +175,12 @@
     margin-bottom: 1.5rem;
   }
 
-  .perguntas {
+  .faq-pergunta {
     font-size: 1.4rem;
     margin-bottom: 1rem;
   }
 
-  .respostas {
+  .faq-resposta {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
   }
@@ -220,7 +225,6 @@
     display: inline-block;
     width: auto; /* Ajusta a largura para não cortar o texto */
     max-width: 90%; /* Impede que o botão ocupe mais de 90% da largura da tela */
-    margin: 0.5rem; /* Dá espaçamento entre os botões */
   }
 
   /* Ajustes na seção "Sobre Mim" */
@@ -361,7 +365,6 @@
     display: inline-block;
     width: auto;
     max-width: 85%;
-    margin: 0.5rem;
   }
 
   /* Ajustes na seção "Sobre Mim" */
