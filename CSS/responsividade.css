@@ -449,7 +449,7 @@ body {
   /* Esoaçando o footer para A54 */
   @media screen and (min-width: 1080) and (max-width: 1080px) {
     .btn-social-footer {
-      margin-top: 2rem;
+      margin-top: 4rem;
     }
   }
 }
