@@ -8,15 +8,19 @@
     <meta name="author" content="Cintia Almeida"/>
     <link rel="shortcut icon" href="Components/Images/Icone/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="CSS/style.css"/>
-    <link rel="stylesheet" href="CSS/media.css">
-    <link rel="stylesheet" href="CSS/responsividade-celular.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="CSS/responsividade.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Cintia Almeida - Psicóloga, Terapeuta...</title>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper"
       <header>
         <nav class="cabecalho">
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
           <ul class="nav-list">
             <li class="nav-item"><a href="#sobre-mim">sobre mim</a></li>
             <li class="nav-item"><a href="#depoimentos">depoimentos</a></li>
@@ -34,9 +38,7 @@
             <img id="logo" src="Components/Images/borboleta-melhorada.png" alt="Ícone do site de Cíntia Almeida: fundo branco com uma borboleta ciano no centro"/>
 
             <div class="textos">
-              <p class="texto-chamativo-maior">Você não precisa carregar tudo sozinho(a).
-                <span class="ciano">Vamos conversar?</span>
-              </p>
+              <p class="texto-chamativo-maior">Você não precisa carregar tudo sozinho(a)! Vamos conversar?</p>
               <p class="texto-chamativo-menor">Se você está se sentindo sobrecarregado, ansioso ou simplesmente perdido, saiba: você não está só. Todos enfrentamos momentos desafiadores na vida, onde parece difícil encontrar clareza ou equilíbrio. Aqui é um espaço seguro, livre de julgamentos, criado para te ouvir, te acolher e caminhar ao seu lado. A terapia é muito mais do que conversar—é uma oportunidade de entender suas emoções, descobrir suas forças e construir um caminho mais leve e significativo.</p>
             </div>
           </div>
@@ -110,7 +112,7 @@
                 </header>
                 <!-- avaliação -->
                  <div class="conteudo-card">
-                  <p class="texto-depoimento">Quando comecei a terapia, estava perdida e com muita ansiedade. A Dra. Juliana me acolheu com tanta empatia que, desde a primeira sessão, me senti segura. Hoje consigo entender meus sentimentos e tomar decisões com mais clareza. Foi transformador.</p>
+                  <p class="texto-depoimento">Quando comecei a terapia, estava perdida e com muita ansiedade. A Dra. Cíntia me acolheu com tanta empatia que, desde a primeira sessão, me senti segura. Hoje consigo entender meus sentimentos e tomar decisões com mais clareza. Foi transformador.</p>
                     <div class="avaliacao">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -226,15 +228,14 @@
         </section>
 
         <!-- consultório -->
-        <section id="consultorio">
+        <section id="consultorio" class="consultorio-container">
         <h1 class="titulo-consultorio">Conheça meu consultório</h1>
         
         <!--container principal do carrossel-->
         <div class="carrossel-container">
           <button id="prev" class="seta esquerda">&lt;</button> <!--botão da seta para esquerda-->
           <button id="next" class="seta direita">&gt;</button> <!--botão da seta para direita-->
-          <!--carrossel das imagens (instagram)-->
-        
+          
           <div class="carrossel-instagram">
             <!--cada post é uma imagem e sua descrição-->
             <div class="post ativo">
@@ -308,7 +309,6 @@
             </div>
         </div>
       </div>
-
       <iframe id="maps" src="https://www.google.com/maps/embed?pb=!4v1746821945449!6m8!1m7!1sM3hg94k6dpk12Sw3h7E59A!2m2!1d-23.68137018277362!2d-46.76653777116654!3f340.11166203243044!4f19.383658098866377!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <span>
         <a href="https://www.google.com/maps/place/R.+Marginal,+3820+-+Jardim+Mariane,+S%C3%A3o+Paulo+-+SP,+04905-023/@-23.681332,-46.7691554,17z/data=!4m6!3m5!1s0x94ce52386e28fceb:0x2c40c675c792132e!8m2!3d-23.6813369!4d-46.7665805!16s%2Fg%2F11c2dm0hkn?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank"><p class="endereco">Rua Marginal, 3820 - Jardim Mariane</p></a>
@@ -350,13 +350,25 @@
       <!-- FOOTER -->
       <footer class="rodape">
         <p class="titulo-footer">Pronto(a) para iniciar a sua jornada? Entre em contato!</p>
-          <div class="btn-social-footer">
+        <div class="btn-social-footer">
           <ul class="btn-itens">
-            <li><a href="https://wa.me/5511947860528" target="_blank"> <i class="fa-solid fa-phone"></i></a></li>
-            <li><a href="https://instagram.com/cintiaalmeidapsico"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="mailto:cintia.a.psicologa@gmail.com"> <i class="fa-solid fa-envelope"></i></a></li>
+            <li>
+              <a href="https://wa.me/5511947860528" target="_blank">
+                <img src="Components/Images/RedesSociais/logo whatsapp.png" alt="WhatsApp" class="social-icon" />
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/cintiaalmeidapsico" target="_blank">
+                <img src="Components/Images/RedesSociais/logo instagram.png" alt="Instagram" class="social-icon" />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:cintia.a.psicologa@gmail.com">
+                <img src="Components/Images/RedesSociais/logo gmail.png" alt="Email" class="social-icon" />
+              </a>
+            </li>
           </ul>
-          </div>
+        </div>
       </footer>
       <script src="JavaScript/script.js"></script>
     </div> <!-- fim do wrapper -->

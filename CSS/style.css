@@ -10,11 +10,16 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  height: auto !important;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 main {
   width: 100%;
   max-width: none;
   margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 section {
   scroll-margin-top: 13rem;
@@ -23,7 +28,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   background-color: #f4f4f4;
+  height: auto !important;
   overflow-x: hidden;
+  overflow-y: auto;
   animation: fadeInBody 1s ease-in;
 }
 ul {
@@ -149,6 +156,40 @@ a {
   color: #ffffff;
 }
 
+/* Botão para o menu no celular */
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background-color: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* BODY */
 /* início do site */
 .inicio-do-site {
@@ -244,12 +285,12 @@ a {
   height: 100%;
   padding: 0 1.5rem;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   transition: 0.4s;
   gap: 1rem;
 }
 .btn-social ul li a:hover {
-  color: #555555;
+  color: #555;
 }
 .icone-container {
   display: flex;
@@ -265,7 +306,7 @@ a {
   text-transform: uppercase;
   font-size: clamp(1.8rem, 1.5vw, 1.6rem);
   font-weight: 600;
-  color: #ffffff;
+  color: #fff;
   margin: 0;
 }
 .icone-whatsapp,
@@ -397,6 +438,9 @@ a {
 .depoimentos-card-container:hover {
   box-shadow: 0 0 2.5rem rgba(0, 255, 255, 0.4);
 }
+.depoimento-navegacao {
+  display: none;
+}
 /* quando houver foco em algum card, todos os outros recebem essa classe */
 .depoimentos-card-container.dim {
   opacity: 0.3;
@@ -522,6 +566,14 @@ a {
   z-index: 1; /*fica abaixo da imagem principal*/
 }
 
+.post-img {
+  width: 100%; /*imagem ocupa toda a largura do post*/
+  height: auto; /*altura automática para manter proporção*/
+  border-radius: 2rem; /*bordas arredondadas*/
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /*sombra suave*/
+  transition: transform 0.3s ease; /*suaviza a transição de tamanho*/
+}
+
 /*efeito de zoom ao passar o mouse na imagem*/
 .post:hover .post-img {
   transform: scale(1.05); /*aumenta levemente a imagem*/
@@ -597,7 +649,7 @@ a {
   background-color: #00363e;
   animation: pulse 2.5s infinite;
 }
-.endereco{
+.endereco {
   font-family: "Sansita", sans-serif;
   font-size: 2rem;
   color: #ffffff;
@@ -616,7 +668,7 @@ a {
 }
 .faq-titulo {
   text-align: center;
-  font-size: 6rem;
+  font-size: 4rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
@@ -659,13 +711,12 @@ a {
 /* footer */
 .rodape {
   background-color: #226785;
-  height: 100px;
 }
 .titulo-footer {
   text-align: center;
   color: white;
   font-family: "Sansita", sans-serif;
-  font-size: 2.30rem;
+  font-size: 2.3rem;
   padding-top: 1.25rem;
 }
 .btn-social-footer {
@@ -677,10 +728,16 @@ a {
   gap: 20px;
   box-sizing: border-box;
   flex-wrap: wrap;
-  font-size: 20px;
 }
 .btn-itens {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.social-icon {
+  width: 4rem;
+  height: auto;
 }

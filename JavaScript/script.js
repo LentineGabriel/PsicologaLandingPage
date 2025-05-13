@@ -1,9 +1,63 @@
+// mobile menu
+class MobileNavbar {
+  constructor(mobileMenu, navList, navLinks) {
+    this.mobileMenu = document.querySelector(mobileMenu);
+    this.navList = document.querySelector(navList);
+    this.navLinks = document.querySelectorAll(navLinks);
+    this.activeClass = "active";
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  animateLinks() {
+    this.navLinks.forEach((link, index) => {
+      link.style.animation
+        ? (link.style.animation = "")
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
+    });
+  }
+
+  handleClick() {
+    this.navList.classList.toggle(this.activeClass);
+    this.mobileMenu.classList.toggle(this.activeClass);
+    this.animateLinks();
+  }
+
+  addClickEvent() {
+    this.mobileMenu.addEventListener("click", this.handleClick);
+  }
+
+  addLinkEvents() {
+    this.navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        this.navList.classList.remove(this.activeClass);
+        this.mobileMenu.classList.remove(this.activeClass);
+        this.animateLinks();
+      });
+    });
+  }
+
+  init() {
+    if (this.mobileMenu) {
+      this.addClickEvent();
+      this.addLinkEvents();
+    }
+    return this;
+  }
+}
+
+const mobileNavbar = new MobileNavbar(
+  ".mobile-menu",
+  ".nav-list",
+  ".nav-list li a"
+);
+mobileNavbar.init();
+
+
 // accordion para o sobre mim
 document.querySelectorAll(".perguntas").forEach((pergunta) => {
   pergunta.addEventListener("click", () => {
     const resposta = pergunta.nextElementSibling;
 
-    // Fecha todas as outras perguntas
     document.querySelectorAll(".perguntas").forEach((outraPergunta) => {
       const outraResposta = outraPergunta.nextElementSibling;
 
@@ -14,7 +68,6 @@ document.querySelectorAll(".perguntas").forEach((pergunta) => {
       }
     });
 
-    // Alterna a pergunta clicada
     const isActive = pergunta.classList.contains("active");
     if (isActive) {
       pergunta.classList.remove("active");
@@ -28,8 +81,8 @@ document.querySelectorAll(".perguntas").forEach((pergunta) => {
   });
 });
 
-
 // efeito nos depoimentos
+
 
 // efeito carrosel no consultorio
 let nextbutton = document.getElementById("next");
