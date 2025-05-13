@@ -250,47 +250,29 @@ body {
 /* === BEAKPOINT PARA CELULARES MÉDIOS */
 @media screen and (min-width: 481px) and (max-width: 767px) {
   /* NAV BAR */
-  .cabecalho {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    height: 6rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-  }
   .nav-list {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 100%;
+    height: 82vh;
+    background: #226785;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease-in;
   }
-  .nav-item {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 8px;
-  }
-  .nav-item a {
-    color: white;
-    text-decoration: none;
-    padding: 1rem 1.5rem;
-  }
-  .nav-item:hover a {
-    color: #00ffff;
-    border-radius: 5px;
-  }
-  .botao-FaleComigo {
-    font-size: 1.4rem;
-    padding: 1.5rem 2rem;
+  .nav-list li {
     margin-left: 0;
-    display: none;
+    opacity: 0;
   }
-   .mobile-menu {
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  .mobile-menu {
     display: block;
   }
   @keyframes navLinkFade {
@@ -302,6 +284,14 @@ body {
       opacity: 1;
       transform: translateX(0);
     }
+  }
+
+  .nav-list li {
+    opacity: 0;
+  }
+
+  .nav-list.active li {
+    opacity: 1;
   }
 
   /* INÍCIO DO SITE */
@@ -587,7 +577,7 @@ body {
     padding: 1rem 0;
   }
 
-    .btn-social-footer {
+  .btn-social-footer {
     display: flex;
     justify-content: center;
     margin-top: -2rem;
