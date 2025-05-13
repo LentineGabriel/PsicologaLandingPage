@@ -228,7 +228,7 @@ body {
   .btn-social-footer {
     display: flex;
     justify-content: center;
-    margin-top: -2rem;
+    padding-top: 2rem;
   }
   .btn-itens {
     display: flex;
@@ -285,11 +285,9 @@ body {
       transform: translateX(0);
     }
   }
-
   .nav-list li {
     opacity: 0;
   }
-
   .nav-list.active li {
     opacity: 1;
   }
@@ -434,7 +432,7 @@ body {
   .btn-social-footer {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    padding-top: 2rem;
   }
   .btn-itens {
     display: flex;
@@ -446,12 +444,6 @@ body {
     font-size: 1.5rem;
   }
 }
-/* espaçando o footer no A54 */
-@media screen and (min-width: 1080) and (max-width: 1080px) {
-    .btn-social-footer {
-      margin-top: 4rem;
-    }
-  }
 
 /* === BREAKPOINT PARA TABLETS */
 @media (min-width: 768px) and (max-width: 1024px) {
