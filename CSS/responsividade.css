@@ -431,7 +431,7 @@ body {
   .btn-social-footer {
     display: flex;
     justify-content: center;
-    margin-top: -2rem;
+    margin-top: 2rem;
   }
   .btn-itens {
     display: flex;
@@ -441,6 +441,9 @@ body {
     padding: 0;
     list-style: none;
     font-size: 1.5rem;
+  }
+  .social-icon{
+    
   }
 }
 
