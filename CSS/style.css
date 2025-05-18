@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita:ital,wght@0,400..900;1,400..900&family=Teko:wght@300..700&display=swap");
 
-/* Resolução Dispositivo-Padrão: 1366x768 (Monitor de notebooks) */
-/* CONFIGURAÇÃO GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -42,7 +40,6 @@ a {
   font-weight: bold;
 }
 
-/* WRAPPER para resolução base (1366x768) */
 .wrapper {
   width: 100%;
   max-width: 136.6rem;
@@ -55,9 +52,6 @@ a {
 .faq-container {
   animation: fadeInUp 1s ease-in-out;
 }
-
-/* KeyFrames */
-/* Inicialização do Site */
 @keyframes fadeInBody {
   from {
     opacity: 0;
@@ -66,8 +60,6 @@ a {
     opacity: 1;
   }
 }
-
-/* botão Fale Comigo */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -79,7 +71,6 @@ a {
     transform: scale(1);
   }
 }
-/* texto motivacional */
 @keyframes breathe {
   0%,
   100% {
@@ -91,14 +82,12 @@ a {
     transform: scale(1.02);
   }
 }
-
-/* NAV BAR */
 .cabecalho {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999; /* navbar na frente de tudo */
+  z-index: 999;
   display: flex;
   justify-content: center;
   background-color: #226785;
@@ -116,7 +105,7 @@ a {
 }
 .nav-item {
   font-family: "Teko", sans-serif;
-  color: #ffffff;
+  color: #fff;
   font-size: clamp(1rem, 4vw, 2rem);
   text-transform: uppercase;
   cursor: pointer;
@@ -141,8 +130,6 @@ a {
   width: 100%;
   text-decoration: none;
 }
-
-/* Animações do Cabeçalho */
 .nav-item a:hover {
   color: #00ffff;
   transition: 0.2s ease;
@@ -155,13 +142,10 @@ a {
 .cor-fonte-branco a:hover {
   color: #ffffff;
 }
-
-/* Botão para o menu no celular */
 .mobile-menu {
   display: none;
   cursor: pointer;
 }
-
 .mobile-menu div {
   width: 32px;
   height: 2px;
@@ -178,7 +162,6 @@ a {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
-
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -189,9 +172,6 @@ a {
     transform: translateX(0);
   }
 }
-
-/* BODY */
-/* início do site */
 .inicio-do-site {
   padding-top: 7rem;
   margin: 0;
@@ -248,7 +228,7 @@ a {
   flex-wrap: wrap;
 }
 .btn-social ul li {
-  position: relative; /* não tirar */
+  position: relative;
   background: #226785;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -265,7 +245,7 @@ a {
 }
 .btn-social ul li::before {
   content: "";
-  position: absolute; /* não tirar */
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 90%;
@@ -314,8 +294,6 @@ a {
 .icone-gmail {
   height: 4.5rem;
 }
-
-/* sobre mim */
 .sobre-mim-container {
   display: flex;
   flex-direction: row;
@@ -379,8 +357,6 @@ a {
   margin-bottom: 2rem;
   line-height: 1.6;
 }
-
-/* depoimentos */
 .depoimento-container {
   max-width: 136.6rem;
   margin: 0 auto;
@@ -428,8 +404,8 @@ a {
   opacity: 1;
   filter: none;
   transform: scale(1);
-  position: relative; /* não tirar, isso vai garantir que z-index funcione no hover */
-  height: 600px; /* o card vai acompanhar a altura do container */
+  position: relative;
+  height: 600px;
   color: white;
   font-family: "Sansita";
   display: flex;
@@ -437,11 +413,10 @@ a {
 }
 .depoimentos-card-container:hover {
   box-shadow: 0 0 2.5rem rgba(0, 255, 255, 0.4);
-   animation: pulseHighlight 0.6s ease-in-out forwards;
+  animation: pulseHighlight 0.6s ease-in-out forwards;
   z-index: 2;
   cursor: pointer;
 }
-/*animaçao do depoimentos*/
 @keyframes pulseHighlight {
   0% {
     transform: scale(1.05);
@@ -456,16 +431,14 @@ a {
     box-shadow: 0 0 2rem rgba(0, 255, 255, 0.3);
   }
 }
- .depoimento-navegacao {
+.depoimento-navegacao {
   display: none;
 }
-/* quando houver foco em algum card, todos os outros recebem essa classe */
 .depoimentos-card-container.dim {
   opacity: 0.3;
   filter: blur(0.15rem);
   transform: scale(0.95);
 }
-/* quando o card estiver em foco, ele recebe essa classe */
 .depoimentos-card-container.highlight {
   opacity: 1;
   filter: none;
@@ -473,7 +446,7 @@ a {
   z-index: 10;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
   width: 32rem;
-  height: auto; /* o card vai crescer na vertical conforme a quantidade de conteúdo */
+  height: auto;
   cursor: pointer;
 }
 .depoimentos-card-container header {
@@ -512,144 +485,111 @@ a {
   position: relative;
   margin-top: auto;
 }
-
-/* consultório */
 #consultorio {
-  max-width: 136.6rem; /* largura máxima do container */
-  margin: 0 auto; /*centraliza a seção*/
-  padding: 4rem 2rem; /*espaçamento interno */
-  text-align: center; /*centraliza o texto */
-  background-color: #226785; /*cor de fundo da seção */
+  max-width: 136.6rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #226785;
 }
-
 .titulo-consultorio {
-  font-family: "Sansita", sans-serif; /*define a fonte*/
-  color: #ffffff; /*cor do texto*/
-  font-size: 4rem; /*tamanho da fonte*/
-  margin-bottom: 3rem; /*espaço abaixo do título*/
-  text-transform: uppercase; /*transofrmação do texto para maiúsculas*/
+  font-family: "Sansita", sans-serif;
+  color: #ffffff;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
 }
-
-/*container do carrossel (responsável por conter as imagens*/
 .carrossel-container {
-  position: relative; /*necessário para posicionar os botões e as imagens*/
-  max-width: 700px; /*largura máxima*/
-  margin: 60px auto; /*espaçamento externo e centralizado*/
-  padding: 0 60px; /* espaço entre as imagens e as setas */
-  overflow: hidden; /*oculta as imagens fora do container*/
-  transform-style: preserve-3d; /*permite que os elementos dentro do container tenham profundidade*/
+  position: relative;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 60px;
+  overflow: hidden;
+  transform-style: preserve-3d;
 }
-
-/*container que abriga as imagens*/
 .carrossel-instagram {
   position: relative;
-  height: 450px; /*altura do carrossel*/
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/*cada post (imagem e descrição)*/
 .post {
-  position: absolute; /*permite sobreposição das imagens*/
-  opacity: 0; /*inicialmente invisível*/
-  transition: 0.8s ease; /*transições suaves ao mudar de estado*/
-  pointer-events: none; /*desabilita interações enquanto o post não está ativo*/
-  z-index: 0; /*coloca o post atrás dos demais por padrão*/
-  transform: scale(0.8); /*reduz o tamanho da imagem*/
+  position: absolute;
+  opacity: 0;
+  transition: 0.8s ease;
+  pointer-events: none;
+  z-index: 0;
+  transform: scale(0.8);
 }
-
-/*estilo do post ativo (imagem central em destaque)*/
 .post.ativo {
-  opacity: 1; /*totalmente visível*/
-  transform: translateX(-50%) scale(1); /*centraliza horizontalmente e mantém o tamanho original*/
-  left: 50%; /*posiciona o centro da imagem no meio do container*/
-  z-index: 3; /*coloca acima dos outros*/
-  pointer-events: auto; /*permite interações (ex:hover)*/
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  left: 50%;
+  z-index: 3;
+  pointer-events: auto;
 }
-
-/*estilo do post anterior (imagem a direita, opaca e reduzida*/
 .post.anterior {
-  opacity: 0.4; /*mais transparente*/
-  transform: translateX(-140%) scale(0.8); /*posiciona mais a esquerda e reduz o tamanho*/
-  left: 50%; /*referência ao centro para facilitar o cálculo com translate*/
-  z-index: 1; /*fica abaixo da imagem principal*/
+  opacity: 0.4;
+  transform: translateX(-140%) scale(0.8);
+  left: 50%;
+  z-index: 1;
 }
-
-/*estilo do post seguinte (imagem a direita, opaca e reduzida)*/
 .post.proximo {
-  opacity: 0.4; /*mais transparente*/
-  transform: translateX(40%) scale(0.8); /*posiciona a direita e reduz o tamanho*/
-  left: 50%; /*referência ao centro*/
-  z-index: 1; /*fica abaixo da imagem principal*/
+  opacity: 0.4;
+  transform: translateX(40%) scale(0.8);
+  left: 50%;
+  z-index: 1;
 }
-
 .post-img {
-  width: 100%; /*imagem ocupa toda a largura do post*/
-  height: auto; /*altura automática para manter proporção*/
-  border-radius: 2rem; /*bordas arredondadas*/
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /*sombra suave*/
-  transition: transform 0.3s ease; /*suaviza a transição de tamanho*/
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
-
-/*efeito de zoom ao passar o mouse na imagem*/
 .post:hover .post-img {
-  transform: scale(1.05); /*aumenta levemente a imagem*/
+  transform: scale(1.05);
 }
-
-/*estilo da legenda (descrição) de cada imagem*/
 .post figcaption {
-  margin-top: 0.8rem; /*espaço entre a imagem e o texto*/
-  font-size: 1.2rem; /*tamanho inicial da fonte*/
-  color: #ffffff; /* Cor branca para contraste com fundo escuro */
-  text-align: center; /*centraliza o texto*/
-  transition: font-size 0.3s ease; /*suaviza a transição de tamanho*/
-  font-family: "Sansita" sans-serif; /*define a fonte da legenda*/
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  transition: font-size 0.3s ease;
+  font-family: "Sansita" sans-serif;
 }
-
-/*aumenta o tamanho da fonte da legenda ao passar o mouse*/
 .post:hover figcaption {
   font-size: 1.35rem;
 }
-
-/*estilização dos botões de seta (navegação)*/
 .seta {
-  position: absolute; /*permite posicionamento preciso*/
-  top: 50%; /*centraliza verticalmente*/
-  transform: translateY(-50%); /*ajuste fino para centralização*/
-  font-size: 2.4rem; /*tamanho do ícone da seta*/
-  background-color: rgba(255, 255, 255, 0.9); /* branco com transparência */
-  color: #226785; /* azul do tema */
-  border: none; /*remove bordas padrão*/
-  padding: 1rem 1.4rem; /*espaçamento interno*/
-  cursor: pointer; /*icone da mãozinha ao passar o mouse*/
-  z-index: 10; /*garante que as setas fiquem acima de todos os elementos*/
-  border-radius: 50%; /*formato circular*/
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /*sombra suave*/
-  transition: background-color 0.3s ease, transform 0.2s ease; /*suaviza as transições*/
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.4rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #226785;
+  border: none;
+  padding: 1rem 1.4rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-/*efeito ao passar o mouse sobre as setas*/
 .seta:hover {
-  background-color: #ffffff; /*fica um branco mais sólido*/
-  transform: translateY(-50%) scale(1.1); /*aumenta um pouco*/
+  background-color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
 }
-
-/*efeito ao clicar nas setas*/
 .seta:active {
-  transform: translateY(-50%) scale(0.95); /*diminui levemente para simular clique */
+  transform: translateY(-50%) scale(0.95);
 }
-
-/*posição da seta da esquerda*/
 .seta.esquerda {
-  left: 10px; /*posicionada um pouco fora da imagem a esquerda*/
+  left: 10px;
 }
-
-/*posição da seta da direita*/
 .seta.direita {
-  right: 10px; /*posicionada um pouco fora da imagem a direita*/
+  right: 10px;
 }
-
 #maps {
   display: inline-block;
   padding: 1.2rem 4rem;
@@ -676,8 +616,11 @@ a {
   text-decoration: underline;
   cursor: pointer;
 }
-
-/* faq */
+.endereco:hover {
+  font-size: 2.5rem;
+  color: #00ffff;
+  transition: 0.3s all ease-in-out;
+}
 .faq-container {
   max-width: 100%;
   margin: 4rem auto;
@@ -725,8 +668,6 @@ a {
 .faq-item.active .faq-resposta {
   max-height: 500px;
 }
-
-/* footer */
 .rodape {
   background-color: #226785;
 }

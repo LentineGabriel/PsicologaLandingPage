@@ -1,4 +1,3 @@
-// mobile menu
 class MobileNavbar {
   constructor(mobileMenu, navList, navLinks) {
     this.mobileMenu = document.querySelector(mobileMenu);
@@ -53,7 +52,6 @@ const mobileNavbar = new MobileNavbar(
 mobileNavbar.init();
 
 
-// accordion para o sobre mim
 document.querySelectorAll(".perguntas").forEach((pergunta) => {
   pergunta.addEventListener("click", () => {
     const resposta = pergunta.nextElementSibling;
@@ -81,10 +79,34 @@ document.querySelectorAll(".perguntas").forEach((pergunta) => {
   });
 });
 
-// efeito nos depoimentos
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".depoimentos-card-container");
 
+    cards.forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        cards.forEach((c) => {
+          if (c !== card) {
+            c.style.opacity = "0.4";
+            c.style.transform = "scale(0.95)";
+          } else {
+            c.style.zIndex = "10";
+            c.style.transform = "scale(1.05)";
+            c.style.boxShadow = "0 10px 20px rgba(0,0,0,0.2)";
+          }
+        });
+      });
 
-// efeito carrosel no consultorio
+      card.addEventListener("mouseleave", () => {
+        cards.forEach((c) => {
+          c.style.opacity = "1";
+          c.style.transform = "scale(1)";
+          c.style.zIndex = "1";
+          c.style.boxShadow = "none";
+        });
+      });
+    });
+  });
+
 let nextbutton = document.getElementById("next");
 let prevbutton = document.getElementById("prev");
 let posts = document.querySelectorAll(".post");
@@ -111,7 +133,6 @@ prevbutton.onclick = () => {
   mostrarPost(ativo);
 };
 
-// accordion para o faq
 const questions = document.querySelectorAll(".faq-pergunta");
 
 questions.forEach((btn) => {

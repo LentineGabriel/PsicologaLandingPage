@@ -10,9 +10,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
-/* === BREAKPOINT PARA CELULARES PEQUENOS === */
 @media screen and (max-width: 480px) {
-  /* NAVBAR */
   .nav-list {
     position: absolute;
     top: 9vh;
@@ -48,16 +46,12 @@ body {
       transform: translateX(0);
     }
   }
-
   .nav-list li {
     opacity: 0;
   }
-
   .nav-list.active li {
     opacity: 1;
   }
-
-  /* INÍCIO DO SITE */
   .container-inicial {
     height: auto;
     padding: 0 5%;
@@ -121,8 +115,6 @@ body {
   .btn-social figcaption {
     display: none;
   }
-
-  /* SOBRE MIM */
   .sobre-mim-container {
     display: flex;
     flex-direction: column;
@@ -145,8 +137,6 @@ body {
     margin-top: 2vh;
     max-width: 100%;
   }
-
-  /* DEPOIMENTOS */
   .depoimentos-card-principal {
     display: flex;
     flex-direction: column;
@@ -162,8 +152,6 @@ body {
   .avaliacao {
     margin-top: 3rem;
   }
-
-  /* CONSULTÓRIO */
   .post-img {
     width: 100%;
     max-width: 100%;
@@ -196,8 +184,6 @@ body {
     pointer-events: none;
     margin-top: -1.5rem;
   }
-
-  /* FAQ */
   .faq-titulo {
     display: block;
     width: 100%;
@@ -217,8 +203,6 @@ body {
     max-height: 500px;
     padding: 1rem 0;
   }
-
-  /* FOOTER */
   .titulo-footer {
     color: white;
     font-family: "Sansita", sans-serif;
@@ -246,10 +230,7 @@ body {
     width: 100%;
   }
 }
-
-/* === BEAKPOINT PARA CELULARES MÉDIOS */
 @media screen and (min-width: 481px) and (max-width: 767px) {
-  /* NAV BAR */
   .nav-list {
     position: absolute;
     top: 10vh;
@@ -291,8 +272,6 @@ body {
   .nav-list.active li {
     opacity: 1;
   }
-
-  /* INÍCIO DO SITE */
   .inicio-do-site {
     padding-top: 6rem;
   }
@@ -318,8 +297,6 @@ body {
     padding: 10px;
     margin-right: 25px;
   }
-
-  /* Botões sociais */
   .btn-social {
     justify-content: center;
     padding: 1rem;
@@ -346,8 +323,6 @@ body {
   .btn-social figcaption {
     display: none;
   }
-
-  /* SOBRE MIM */
   .sobre-mim-container {
     flex-direction: column;
     padding: 2rem 1rem;
@@ -362,8 +337,6 @@ body {
     padding-left: 0;
     margin-top: 1rem;
   }
-
-  /* DEPOIMENTOS */
   #texto-descritivo {
     display: none;
   }
@@ -385,8 +358,6 @@ body {
   .avaliacao {
     padding: 20px;
   }
-
-  /* CONSULTÓRIO */
   #consultorio {
     padding: 2rem;
   }
@@ -401,8 +372,6 @@ body {
     pointer-events: none;
     border-radius: 1rem;
   }
-
-  /* Carrossel Instagram */
   .carrossel-container {
     max-width: 100%;
     padding: 0 15px;
@@ -413,8 +382,6 @@ body {
   .post {
     transform: scale(0.8);
   }
-
-  /* FOOTER */
   .rodape {
     background-color: #226785;
     padding: 2rem 1rem;
@@ -444,16 +411,11 @@ body {
     font-size: 1.5rem;
   }
 }
-
-/* === BREAKPOINT PARA TABLETS */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Cabeçalho: nav centralizado e responsivo */
   .cabecalho {
     padding: 1rem;
     height: auto;
   }
-
-  /* Seção inicial do site */
   .container-inicial {
     flex-direction: column;
     align-items: center;
@@ -476,8 +438,6 @@ body {
     font-size: 1.8rem;
     padding: 0 1rem;
   }
-
-  /* botoes */
   .btn-social {
     justify-content: center;
     padding-right: 0;
@@ -490,11 +450,9 @@ body {
   .icone-container figcaption {
     font-size: 1.1rem;
   }
-
   .icone-container img {
     height: 3rem;
   }
-  /* Ajusta os botões sociais para tamanho menor */
   .btn-social ul li {
     width: 15rem;
     height: 5rem;
@@ -506,22 +464,17 @@ body {
     justify-content: center;
     gap: 0.5rem;
   }
-  /* Sobre mim: empilha e centraliza tudo */
   .sobre-mim-container {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
   }
-
-  /* Consultório */
   #consultorio {
     padding: 3rem 1rem;
   }
   .titulo-consultorio {
     font-size: 2.8rem;
   }
-
-  /* Depoimentos */
   #texto-descritivo {
     display: none;
   }
@@ -537,8 +490,6 @@ body {
   .avaliacao {
     margin-top: 2rem;
   }
-
-  /* Consultório */
   .post figcaption {
     display: none;
   }
@@ -549,8 +500,6 @@ body {
     display: block;
     pointer-events: none;
   }
-
-  /* Faq */
   .faq-container {
     max-height: none;
     overflow: visible;
@@ -577,7 +526,6 @@ body {
     max-height: 500px;
     padding: 1rem 0;
   }
-
   .btn-social-footer {
     display: flex;
     justify-content: center;
@@ -593,9 +541,3 @@ body {
     font-size: 1.5rem;
   }
 }
-
-/* === BREAKPOINT PARA RESOLUÇÕES HD (1280px) */
-@media (min-width: 1280px) and (max-width: 1280px) {
-}
-
-/* === BREAKPOINT PARA MONITORES FULL HD (1920x1080) */
